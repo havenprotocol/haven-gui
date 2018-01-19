@@ -34,7 +34,7 @@ DaemonManager *DaemonManager::instance(const QStringList *args)
 
 bool DaemonManager::start(const QString &flags, bool testnet, const QString &dataDir)
 {
-    // prepare command line arguments and pass to monerod
+    // prepare command line arguments and pass to havend
     QStringList arguments;
 
     // Start daemon with --detach flag on non-windows platforms
@@ -71,7 +71,7 @@ bool DaemonManager::start(const QString &flags, bool testnet, const QString &dat
 
 
 
-    qDebug() << "starting monerod " + m_monerod;
+    qDebug() << "starting havend " + m_havend;
     qDebug() << "With command line arguments " << arguments;
 
     m_daemon = new QProcess();
@@ -81,8 +81,8 @@ bool DaemonManager::start(const QString &flags, bool testnet, const QString &dat
     connect (m_daemon, SIGNAL(readyReadStandardOutput()), this, SLOT(printOutput()));
     connect (m_daemon, SIGNAL(readyReadStandardError()), this, SLOT(printError()));
 
-    // Start monerod
-    bool started = m_daemon->startDetached(m_monerod, arguments);
+    // Start havend
+    bool started = m_daemon->startDetached(m_havend, arguments);
 
     // add state changed listener
     connect(m_daemon,SIGNAL(stateChanged(QProcess::ProcessState)),this,SLOT(stateChanged(QProcess::ProcessState)));
@@ -163,9 +163,9 @@ bool DaemonManager::stopWatcher(bool testnet) const
             if(counter >= 5) {
                 qDebug() << "Killing it! ";
 #ifdef Q_OS_WIN
-                QProcess::execute("taskkill /F /IM monerod.exe");
+                QProcess::execute("taskkill /F /IM havend.exe");
 #else
-                QProcess::execute("pkill monerod");
+                QProcess::execute("pkill havend");
 #endif
             }
 
@@ -207,11 +207,11 @@ void DaemonManager::printError()
 }
 
 bool DaemonManager::running(bool testnet) const
-{ 
+{
     QString status;
     sendCommand("status",testnet, status);
     qDebug() << status;
-    // `./monerod status` returns BUSY when syncing.
+    // `./havend status` returns BUSY when syncing.
     // Treat busy as connected, until fixed upstream.
     if (status.contains("Height:") || status.contains("BUSY") ) {
         return true;
@@ -237,7 +237,7 @@ bool DaemonManager::sendCommand(const QString &cmd,bool testnet, QString &messag
     qDebug() << "sending external cmd: " << external_cmd;
 
 
-    p.start(m_monerod, external_cmd);
+    p.start(m_havend, external_cmd);
 
     bool started = p.waitForFinished(-1);
     message = p.readAllStandardOutput();
@@ -293,14 +293,14 @@ DaemonManager::DaemonManager(QObject *parent)
     : QObject(parent)
 {
 
-    // Platform depetent path to monerod
+    // Platform depetent path to havend
 #ifdef Q_OS_WIN
-    m_monerod = QApplication::applicationDirPath() + "/monerod.exe";
+    m_havend = QApplication::applicationDirPath() + "/havend.exe";
 #elif defined(Q_OS_UNIX)
-    m_monerod = QApplication::applicationDirPath() + "/monerod";
+    m_havend = QApplication::applicationDirPath() + "/havend";
 #endif
 
-    if (m_monerod.length() == 0) {
+    if (m_havend.length() == 0) {
         qCritical() << "no daemon binary defined for current platform";
         m_has_daemon = false;
     }

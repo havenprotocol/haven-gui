@@ -252,10 +252,10 @@ Rectangle {
 
             StandardButton {
                 id: generatePaymentId
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 text: qsTr("Generate") + translationManager.emptyString;
                 onClicked: updatePaymentId()
             }
@@ -263,10 +263,10 @@ Rectangle {
             StandardButton {
                 id: clearPaymentId
                 enabled: !!paymentIdLine.text
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 text: qsTr("Clear") + translationManager.emptyString;
                 onClicked: updatePaymentId("")
             }
@@ -337,7 +337,7 @@ Rectangle {
             Label {
                 id: trackingLabel
                 textFormat: Text.RichText
-                text: "<style type='text/css'>a {text-decoration: none; color: #FF6C3C; font-size: 14px;}</style>" +
+                text: "<style type='text/css'>a {text-decoration: none; color: #142f38; font-size: 14px;}</style>" +
                       qsTr("Tracking") +
                       "<font size='2'> (</font><a href='#'>" +
                       qsTr("help") +

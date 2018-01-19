@@ -106,7 +106,7 @@ ListView {
             anchors.topMargin: parent.height/2 - this.height/2
             width: 30 * scaleRatio; height: 30 * scaleRatio
             radius: 25
-            color: "#FF4304"
+            color: "#0F242B"
 
             Image {
                 width: 20 * scaleRatio
@@ -143,7 +143,7 @@ ListView {
                     Layout.leftMargin: 5 * scaleRatio
                     font.family: "Arial"
                     font.pixelSize: 14 * scaleRatio
-                    color:  (confirmations < confirmationsRequired)? "#FF6C3C" : "#545454"
+                    color:  (confirmations < confirmationsRequired)? "#142f38" : "#545454"
                     text: {
                         if (!isPending)
                             if(confirmations < confirmationsRequired)

@@ -33,7 +33,7 @@ Rectangle {
     id: item
     property int fillLevel: 0
     visible: false
-    color: "#1C1C1C"
+    color: "#0F242B"
 
     function updateProgress(currentBlock,targetBlock, blocksToSync, statusTxt){
         if(targetBlock == 1) {
@@ -87,7 +87,7 @@ Rectangle {
                 property int maxWidth: parent.width - 4 * scaleRatio
                 width: (maxWidth * fillLevel) / 100
                 color: {
-                   if(item.fillLevel < 99 ) return "#FF6C3C"
+                   if(item.fillLevel < 99 ) return "#142f38"
                    //if(item.fillLevel < 99) return "#FFE00A"
                     return "#36B25C"
                 }

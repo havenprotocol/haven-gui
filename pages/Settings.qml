@@ -1,21 +1,21 @@
 // Copyright (c) 2014-2015, The Monero Project
-// 
+//
 // All rights reserved.
-// 
+//
 // Redistribution and use in source and binary forms, with or without modification, are
 // permitted provided that the following conditions are met:
-// 
+//
 // 1. Redistributions of source code must retain the above copyright notice, this list of
 //    conditions and the following disclaimer.
-// 
+//
 // 2. Redistributions in binary form must reproduce the above copyright notice, this list
 //    of conditions and the following disclaimer in the documentation and/or other
 //    materials provided with the distribution.
-// 
+//
 // 3. Neither the name of the copyright holder nor the names of its contributors may be
 //    used to endorse or promote products derived from this software without specific
 //    prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
 // EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
@@ -79,10 +79,10 @@ Rectangle {
             StandardButton {
                 id: closeWalletButton
                 text: qsTr("Close wallet") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 visible: true
                 onClicked: {
                     console.log("closing wallet button clicked")
@@ -94,10 +94,10 @@ Rectangle {
                 enabled: !viewOnly
                 id: createViewOnlyWalletButton
                 text: qsTr("Create view only wallet") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 visible: true
                 onClicked: {
                     wizard.openCreateViewOnlyWalletPage();
@@ -108,10 +108,10 @@ Rectangle {
 
             StandardButton {
                 id: rescanWalletbutton
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 text: qsTr("Rescan wallet cache") + translationManager.emptyString
                 onClicked: {
                     // Show confirmation dialog
@@ -143,10 +143,10 @@ Rectangle {
                 id: rescanSpentButton
                 enabled: !persistentSettings.useRemoteNode
                 text: qsTr("Rescan wallet balance") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     if (!currentWallet.rescanSpent()) {
                         console.error("Error: ", currentWallet.errorString);
@@ -168,10 +168,10 @@ Rectangle {
             StandardButton {
                 id: changePasswordButton
                 text: qsTr("Change password") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     passwordDialog.onAcceptedCallback = function() {
                         if(appWindow.walletPassword === passwordDialog.password){
@@ -199,10 +199,10 @@ Rectangle {
                 enabled: persistentSettings.useRemoteNode
                 Layout.fillWidth: false
                 text: qsTr("Local Node") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     appWindow.disconnectRemoteNode();
                 }
@@ -213,10 +213,10 @@ Rectangle {
                 enabled: !persistentSettings.useRemoteNode
                 Layout.fillWidth: false
                 text: qsTr("Remote Node") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     appWindow.connectRemoteNode();
                 }
@@ -255,10 +255,10 @@ Rectangle {
                 visible: !appWindow.daemonRunning
                 id: startDaemonButton
                 text: qsTr("Start Local Node") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     // Set current daemon address to local
                     appWindow.currentDaemonAddress = appWindow.localDaemonAddress
@@ -270,10 +270,10 @@ Rectangle {
                 visible: appWindow.daemonRunning
                 id: stopDaemonButton
                 text: qsTr("Stop Local Node") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     appWindow.stopDaemon()
                 }
@@ -283,10 +283,10 @@ Rectangle {
                 visible: true
                 id: daemonStatusButton
                 text: qsTr("Show status") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
                 onClicked: {
                     daemonManager.sendCommand("status",currentWallet.testnet);
                     daemonConsolePopup.open();
@@ -385,7 +385,7 @@ Rectangle {
                     id: remoteNodeEdit
                     Layout.minimumWidth: 100 * scaleRatio
                     daemonAddrText: persistentSettings.remoteNodeAddress.split(":")[0].trim()
-                    daemonPortText: (persistentSettings.remoteNodeAddress.split(":")[1].trim() == "") ? "18081" : persistentSettings.remoteNodeAddress.split(":")[1]
+                    daemonPortText: (persistentSettings.remoteNodeAddress.split(":")[1].trim() == "") ? "17750" : persistentSettings.remoteNodeAddress.split(":")[1]
                     onEditingFinished: {
                         persistentSettings.remoteNodeAddress = remoteNodeEdit.getAddress();
                         console.log("setting remote node to " + persistentSettings.remoteNodeAddress)
@@ -395,10 +395,10 @@ Rectangle {
                 StandardButton {
                     id: remoteNodeSave
                     text: qsTr("Connect") + translationManager.emptyString
-                    shadowReleasedColor: "#FF4304"
+                    shadowReleasedColor: "#0F242B"
                     shadowPressedColor: "#B32D00"
-                    releasedColor: "#FF6C3C"
-                    pressedColor: "#FF4304"
+                    releasedColor: "#142f38"
+                    pressedColor: "#0F242B"
                     onClicked: {
                         // Update daemon login
                         persistentSettings.remoteNodeAddress = remoteNodeEdit.getAddress();
@@ -520,7 +520,7 @@ Rectangle {
             id: restoreHeightText
             Layout.fillWidth: true
             textFormat: Text.RichText
-            property var txt: "<style type='text/css'>a {text-decoration: none; color: #FF6C3C}</style>" + qsTr("Wallet creation height: ") + currentWallet.walletCreationHeight + translationManager.emptyString
+            property var txt: "<style type='text/css'>a {text-decoration: none; color: #142f38}</style>" + qsTr("Wallet creation height: ") + currentWallet.walletCreationHeight + translationManager.emptyString
             property var linkTxt: qsTr(" <a href='#'>(Click to change)</a>") + translationManager.emptyString
             text: (typeof currentWallet == "undefined") ? "" : txt + linkTxt
 
@@ -548,10 +548,10 @@ Rectangle {
                 Layout.fillWidth: false
                 Layout.leftMargin: 30
                 text: qsTr("Save") + translationManager.emptyString
-                shadowReleasedColor: "#FF4304"
+                shadowReleasedColor: "#0F242B"
                 shadowPressedColor: "#B32D00"
-                releasedColor: "#FF6C3C"
-                pressedColor: "#FF4304"
+                releasedColor: "#142f38"
+                pressedColor: "#0F242B"
 
                 onClicked: {
                     currentWallet.walletCreationHeight = restoreHeight.text
@@ -627,17 +627,17 @@ Rectangle {
                 confirmationDialog.title = qsTr("Warning") + translationManager.emptyString;
                 confirmationDialog.text = "";
                 if(validator.readOnly) {
-                    confirmationDialog.text  += qsTr("Error: Filesystem is read only") + "\n\n"                  
+                    confirmationDialog.text  += qsTr("Error: Filesystem is read only") + "\n\n"
                 }
-                
+
                 if(validator.storageAvailable < 20) {
-                    confirmationDialog.text  += qsTr("Warning: There's only %1 GB available on the device. Blockchain requires ~%2 GB of data.").arg(validator.storageAvailable).arg(15) + "\n\n"     
+                    confirmationDialog.text  += qsTr("Warning: There's only %1 GB available on the device. Blockchain requires ~%2 GB of data.").arg(validator.storageAvailable).arg(15) + "\n\n"
                 } else {
                     confirmationDialog.text  += qsTr("Note: There's %1 GB available on the device. Blockchain requires ~%2 GB of data.").arg(validator.storageAvailable).arg(15) + "\n\n"
                 }
-                
+
                 if(!validator.lmdbExists) {
-                    confirmationDialog.text  += qsTr("Note: lmdb folder not found. A new folder will be created.") + "\n\n" 
+                    confirmationDialog.text  += qsTr("Note: lmdb folder not found. A new folder will be created.") + "\n\n"
                 }
 
                 confirmationDialog.icon = StandardIcon.Question

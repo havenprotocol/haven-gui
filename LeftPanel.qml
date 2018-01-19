@@ -1,21 +1,21 @@
 // Copyright (c) 2014-2015, The Monero Project
-// 
+//
 // All rights reserved.
-// 
+//
 // Redistribution and use in source and binary forms, with or without modification, are
 // permitted provided that the following conditions are met:
-// 
+//
 // 1. Redistributions of source code must retain the above copyright notice, this list of
 //    conditions and the following disclaimer.
-// 
+//
 // 2. Redistributions in binary form must reproduce the above copyright notice, this list
 //    of conditions and the following disclaimer in the documentation and/or other
 //    materials provided with the distribution.
-// 
+//
 // 3. Neither the name of the copyright holder nor the names of its contributors may be
 //    used to endorse or promote products derived from this software without specific
 //    prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
 // EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
@@ -239,7 +239,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.top: (isMobile)? parent.top : column1.bottom
         anchors.topMargin: (isMobile)? 0 : 25
-        color: "#1C1C1C"
+        color: "#0F242B"
 
 
         Flickable {
@@ -281,7 +281,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: dashboardButton.checked || transferButton.checked ? "#1C1C1C" : "#505050"
+                color: dashboardButton.checked || transferButton.checked ? "#0F242B" : "#142f38"
                 height: 1
             }
             */
@@ -294,7 +294,7 @@ Rectangle {
                 anchors.right: parent.right
                 text: qsTr("Send") + translationManager.emptyString
                 symbol: qsTr("S") + translationManager.emptyString
-                dotColor: "#FF6C3C"
+                dotColor: "#142f38"
                 onClicked: {
                     parent.previousButton.checked = false
                     parent.previousButton = transferButton
@@ -307,7 +307,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 
@@ -333,7 +333,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 
@@ -356,7 +356,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 
@@ -380,7 +380,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 
@@ -402,7 +402,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 
@@ -428,7 +428,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: miningButton.checked || settingsButton.checked ? "#1C1C1C" : "#505050"
+                color: miningButton.checked || settingsButton.checked ? "#0F242B" : "#142f38"
                 height: 1
             }
             // ------------- TxKey tab ---------------
@@ -451,7 +451,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 
@@ -475,7 +475,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
             // ------------- Settings tab ---------------
@@ -497,7 +497,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
             // ------------- Sign/verify tab ---------------
@@ -520,7 +520,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: "#505050"
+                color: "#142f38"
                 height: 1
             }
 

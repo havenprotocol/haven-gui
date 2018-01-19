@@ -42,7 +42,7 @@ import "wizard"
 
 ApplicationWindow {
     id: appWindow
-    title: "Monero"
+    title: "Haven"
 
     property var currentItem
     property bool whatIsEnable: false
@@ -71,7 +71,7 @@ ApplicationWindow {
     property bool remoteNodeConnected: false
     property bool androidCloseTapped: false;
     // Default daemon addresses
-    readonly property string localDaemonAddress : !persistentSettings.testnet ? "localhost:18081" : "localhost:28081"
+    readonly property string localDaemonAddress : !persistentSettings.testnet ? "localhost:17750" : "localhost:28081"
     property string currentDaemonAddress;
     property bool startLocalNodeCancelled: false
 
@@ -982,7 +982,7 @@ ApplicationWindow {
         property bool   allow_background_mining : false
         property bool   miningIgnoreBattery : true
         property bool   testnet: false
-        property string daemon_address: testnet ? "localhost:28081" : "localhost:18081"
+        property string daemon_address: testnet ? "localhost:28081" : "localhost:17750"
         property string payment_id
         property int    restore_height : 0
         property bool   is_recovering : false
@@ -1240,7 +1240,7 @@ ApplicationWindow {
 //                PropertyChanges { target: frameArea; blocked: true }
                 PropertyChanges { target: titleBar; visible: true }
 //                PropertyChanges { target: titleBar; y: 0 }
-                PropertyChanges { target: titleBar; title: qsTr("Monero") + translationManager.emptyString }
+                PropertyChanges { target: titleBar; title: qsTr("Haven") + translationManager.emptyString }
                 PropertyChanges { target: mobileHeader; visible: isMobile ? true : false }
             }
         ]
@@ -1514,7 +1514,7 @@ ApplicationWindow {
             property alias text: content.text
             width: content.width + 12
             height: content.height + 17
-            color: "#FF6C3C"
+            color: "#142f38"
             //radius: 3
             visible:false;
 
@@ -1647,7 +1647,7 @@ ApplicationWindow {
           var hash = parts[1]
           var user_url = parts[2]
           var auto_url = parts[3]
-          var msg = qsTr("New version of monero-wallet-gui is available: %1<br>%2").arg(version).arg(user_url) + translationManager.emptyString
+          var msg = qsTr("New version of haven-wallet-gui is available: %1<br>%2").arg(version).arg(user_url) + translationManager.emptyString
           notifier.show(msg)
         }
         else {

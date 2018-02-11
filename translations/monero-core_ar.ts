@@ -117,7 +117,7 @@
     <name>DaemonManagerDialog</name>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="93"/>
-        <source>Starting Monero daemon in %1 seconds</source>
+        <source>Starting Haven daemon in %1 seconds</source>
         <translation>يبدأ تشغيل خادم مونيرو في خلال %1 ثواني</translation>
     </message>
     <message>
@@ -430,7 +430,7 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="86"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+        <source>Mining with your computer helps strengthen the Haven network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Haven. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
         <translation>التعدين بجهازك بيساعد في تقويه شبكه مونيرو. كل ما ناس ازيد بتعدن  كل ما كان اصعب مهاجمه الشبكه,  وكل مساهمه صغيره بتفرق ,. التعدين الفردي بيديك فرصه تكسب شويه مونيرو ,جهازك هيحاول يحل معادلات البلوك . لو لقيت بلوك والجايزه راحت ليك , مبروك عليك يا ابن المحظوظه </translation>
     </message>
     <message>
@@ -908,7 +908,7 @@
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="499"/>
-        <source>Embedded Monero version: </source>
+        <source>Embedded Haven version: </source>
         <translation>نسخه مونيرو المضمنة</translation>
     </message>
     <message>
@@ -1567,12 +1567,12 @@ Please upgrade or connect to another daemon</source>
     <name>WizardConfigure</name>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="79"/>
-        <source>We’re almost there - let’s just configure some Monero preferences</source>
+        <source>We’re almost there - let’s just configure some Haven preferences</source>
         <translation> مبروك خلصنا, يلا نظبط شويه اعدادات للمونيرو .</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="97"/>
-        <source>Kickstart the Monero blockchain?</source>
+        <source>Kickstart the Haven blockchain?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1587,7 +1587,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="144"/>
-        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Monero instance. However, storing the full blockchain is beneficial to the security of the Monero network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
+        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Haven instance. However, storing the full blockchain is beneficial to the security of the Haven network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
         <translation>وضع الحفاظ علي مساحه القرص يستخدم مساحه اقل بكثير . ولكن يستخدم نفس كم البيانات التي يستخدمها خادم مونيرو العادي , ومع ذلك تخزين سلسله الكتل كامله علي جهازك يفيد شبكه مونيرو ولكن اذا كنت علي جهاز مساحته محدوده هذا الخيار مناسب لك</translation>
     </message>
     <message>
@@ -1597,7 +1597,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="175"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
         <translation>التعدين يحمي شبكه مونيرو .وايضا تدفع الشبكه مكافئه بسيطه تجاه هذا العمل . هذا الخيار يسيمح لمونيرو بالتعدين علي جهازك حينما يكون لا يستخدم ويعطل التعدين في حال استخامك للجهاز </translation>
     </message>
 </context>
@@ -1621,7 +1621,7 @@ Please upgrade or connect to another daemon</source>
     <name>WizardDonation</name>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="93"/>
-        <source>Monero development is solely supported by donations</source>
+        <source>Haven development is solely supported by donations</source>
         <translation>تطوير مونيرو قائم بشكل كلي علي التبرعات</translation>
     </message>
     <message>
@@ -1636,7 +1636,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="164"/>
-        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Monero development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Monero development.</source>
+        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Haven development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Haven development.</source>
         <translation>لكل معامله هناك رسوم بسيطه. هذا الخيار يسمح ك باضافه كميه ا	ضافيه , كنسبه من هذه الرسوم , من معاملتك لدعم تطوير مونيرو. علي المثال , 50% تبرع تلقائي من معامله رسومها 0.005 XMR ويضاف 0.0025 XMR لمساعده تطوير مونيرو. </translation>
     </message>
     <message>
@@ -1646,7 +1646,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="194"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
         <translation>التعدين يحمي شبكه مونيرو. والشبكه ايضا تدفع مكافئه بسيطه لهذا العمل. هذا الخيار يسميح لمونيرو بالتعدين علي جهازك وهو لا يستخدم , لن يتم التعدين وجهازك قيد الاستخدام .</translation>
     </message>
 </context>
@@ -1731,7 +1731,7 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="366"/>
-        <source>USE MONERO</source>
+        <source>USE HAVEN</source>
         <translation>إستخدم مونيرو</translation>
     </message>
     <message>
@@ -1826,7 +1826,7 @@ Please upgrade or connect to another daemon</source>
     <name>WizardOptions</name>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="87"/>
-        <source>Welcome to Monero!</source>
+        <source>Welcome to Haven!</source>
         <translation>أهلا بيك في مونيرو</translation>
     </message>
     <message>
@@ -1900,7 +1900,7 @@ Please upgrade or connect to another daemon</source>
     <name>WizardWelcome</name>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="79"/>
-        <source>Welcome to Monero!</source>
+        <source>Welcome to Haven!</source>
         <translation>أهلا بيك في مونيرو!</translation>
     </message>
     <message>
@@ -2037,7 +2037,7 @@ Ringsize: </source>
     </message>
     <message>
         <location filename="../main.qml" line="728"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
+        <source>This address received %1 haven, with %2 confirmation(s).</source>
         <translation>هذا العنوان استلم %1 مونيرو , مع %2 تأكيدات</translation>
     </message>
     <message>
@@ -2112,7 +2112,7 @@ Description: </source>
     </message>
     <message>
         <location filename="../main.qml" line="723"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
+        <source>This address received %1 haven, but the transaction is not yet mined</source>
         <translation>هذا العنوان استلم %1 مونيرو, لكن المعامله لم يتم تعدينها بعد</translation>
     </message>
     <message>
@@ -2142,7 +2142,7 @@ Description: </source>
     </message>
     <message>
         <location filename="../main.qml" line="1017"/>
-        <source>Monero</source>
+        <source>Haven</source>
         <translation>مونيرو</translation>
     </message>
     <message>

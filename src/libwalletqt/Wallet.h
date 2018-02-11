@@ -178,12 +178,6 @@ public:
     Q_INVOKABLE void createTransactionAllAsync(const QString &dst_addr, const QString &payment_id,
                                                quint32 mixin_count, PendingTransaction::Priority priority);
 
-    //! creates sweep unmixable transaction
-    Q_INVOKABLE PendingTransaction * createSweepUnmixableTransaction();
-
-    //! creates async sweep unmixable transaction
-    Q_INVOKABLE void createSweepUnmixableTransactionAsync();
-
     //! Sign a transfer from file
     Q_INVOKABLE UnsignedTransaction * loadTxFile(const QString &fileName);
 

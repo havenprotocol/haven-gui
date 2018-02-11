@@ -1,3 +1,3 @@
-REM Execute the Monero daemon and then stay with window open after it exits
-"C:\Program Files\Monero Core\monerod.exe"
+REM Execute the Haven daemon and then stay with window open after it exits
+"C:\Program Files\Haven Core\havend.exe"
 PAUSE

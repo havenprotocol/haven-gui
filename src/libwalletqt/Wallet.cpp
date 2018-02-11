@@ -375,27 +375,6 @@ void Wallet::createTransactionAllAsync(const QString &dst_addr, const QString &p
     watcher->setFuture(future);
 }
 
-PendingTransaction *Wallet::createSweepUnmixableTransaction()
-{
-    Monero::PendingTransaction * ptImpl = m_walletImpl->createSweepUnmixableTransaction();
-    PendingTransaction * result = new PendingTransaction(ptImpl, this);
-    return result;
-}
-
-void Wallet::createSweepUnmixableTransactionAsync()
-{
-    QFuture<PendingTransaction*> future = QtConcurrent::run(this, &Wallet::createSweepUnmixableTransaction);
-    QFutureWatcher<PendingTransaction*> * watcher = new QFutureWatcher<PendingTransaction*>();
-
-    connect(watcher, &QFutureWatcher<PendingTransaction*>::finished,
-            this, [this, watcher]() {
-        QFuture<PendingTransaction*> future = watcher->future();
-        watcher->deleteLater();
-        emit transactionCreated(future.result(),"","",0);
-    });
-    watcher->setFuture(future);
-}
-
 UnsignedTransaction * Wallet::loadTxFile(const QString &fileName)
 {
     qDebug() << "Trying to sign " << fileName;

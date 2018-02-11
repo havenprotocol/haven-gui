@@ -129,8 +129,8 @@
 <context>
     <name>DaemonManagerDialog</name>
     <message>
-        <source>Starting Monero daemon in %1 seconds</source>
-        <translation type="obsolete">Startuji Monero démóna za %1 sec</translation>
+        <source>Starting Haven daemon in %1 seconds</source>
+        <translation type="obsolete">Startuji Haven démóna za %1 sec</translation>
     </message>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="93"/>
@@ -584,8 +584,8 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="83"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
-        <translation>Těžba s počítačem pomáhá posílit síť Monero. Čím víc lidí těží, tím těžší je, aby byla síť napadena, a každé, byť i jen malé přispění pomáhá. &lt;br&gt; &lt;br&gt;Těžba vám také dává malou šanci vydělat nějaký Monero. Váš počítač vytvoří hash, který pokud bude řešením pasujícím do bloku, dostanete související odměnu. Hodně štěstí!</translation>
+        <source>Mining with your computer helps strengthen the Haven network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Haven. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+        <translation>Těžba s počítačem pomáhá posílit síť Haven. Čím víc lidí těží, tím těžší je, aby byla síť napadena, a každé, byť i jen malé přispění pomáhá. &lt;br&gt; &lt;br&gt;Těžba vám také dává malou šanci vydělat nějaký Haven. Váš počítač vytvoří hash, který pokud bude řešením pasujícím do bloku, dostanete související odměnu. Hodně štěstí!</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="93"/>
@@ -667,7 +667,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::AddressBookImpl</name>
+    <name>Haven::AddressBookImpl</name>
     <message>
         <location filename="../monero/src/wallet/api/address_book.cpp" line="53"/>
         <source>Invalid destination address</source>
@@ -690,7 +690,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::PendingTransactionImpl</name>
+    <name>Haven::PendingTransactionImpl</name>
     <message>
         <location filename="../monero/src/wallet/api/pending_transaction.cpp" line="90"/>
         <source>Attempting to save transaction to file, but specified file(s) exist. Exiting to not risk overwriting. File:</source>
@@ -733,7 +733,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::UnsignedTransactionImpl</name>
+    <name>Haven::UnsignedTransactionImpl</name>
     <message>
         <location filename="../monero/src/wallet/api/unsigned_transaction.cpp" line="75"/>
         <source>This is a watch only wallet</source>
@@ -787,7 +787,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::Wallet</name>
+    <name>Haven::Wallet</name>
     <message>
         <location filename="../monero/src/wallet/api/wallet.cpp" line="246"/>
         <source>Failed to parse address</source>
@@ -810,7 +810,7 @@
     </message>
 </context>
 <context>
-    <name>Monero::WalletImpl</name>
+    <name>Haven::WalletImpl</name>
     <message>
         <location filename="../monero/src/wallet/api/wallet.cpp" line="464"/>
         <source>failed to parse address</source>
@@ -1538,8 +1538,8 @@
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="491"/>
-        <source>Embedded Monero version: </source>
-        <translation>Vestavěná verze Monero: </translation>
+        <source>Embedded Haven version: </source>
+        <translation>Vestavěná verze Haven: </translation>
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="497"/>
@@ -2311,12 +2311,12 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     <name>WizardConfigure</name>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="79"/>
-        <source>We’re almost there - let’s just configure some Monero preferences</source>
-        <translation>Jsme skoro tam - teď jednoduše nakonfigurujte některé předvolby Monero</translation>
+        <source>We’re almost there - let’s just configure some Haven preferences</source>
+        <translation>Jsme skoro tam - teď jednoduše nakonfigurujte některé předvolby Haven</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="97"/>
-        <source>Kickstart the Monero blockchain?</source>
+        <source>Kickstart the Haven blockchain?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="144"/>
-        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Monero instance. However, storing the full blockchain is beneficial to the security of the Monero network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
-        <translation>Režim zachování disku používá podstatně méně místa na disku, ale stejné množství šířky pásma internetového připojení jako běžná instance Monero. Ukládání plné podoby blockchainu je však přínosem pro bezpečnost sítě Monero. Pokud jste v zařízení s omezeným prostorem na disku, pak je tato volba pro vás vhodná.</translation>
+        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Haven instance. However, storing the full blockchain is beneficial to the security of the Haven network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
+        <translation>Režim zachování disku používá podstatně méně místa na disku, ale stejné množství šířky pásma internetového připojení jako běžná instance Haven. Ukládání plné podoby blockchainu je však přínosem pro bezpečnost sítě Haven. Pokud jste v zařízení s omezeným prostorem na disku, pak je tato volba pro vás vhodná.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="157"/>
@@ -2341,8 +2341,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="175"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
-        <translation>Těžení zajišťuje síť Monero a platí také malou odměnu za vykonanou práci. Tato možnost umožní aplikaci Monero těžbu, pokud je počítač napájen ze sítě a je nečinný. Při pokračování v práci zastaví těžbu.</translation>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <translation>Těžení zajišťuje síť Haven a platí také malou odměnu za vykonanou práci. Tato možnost umožní aplikaci Haven těžbu, pokud je počítač napájen ze sítě a je nečinný. Při pokračování v práci zastaví těžbu.</translation>
     </message>
 </context>
 <context>
@@ -2365,8 +2365,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     <name>WizardDaemonSettings</name>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="114"/>
-        <source>To be able to communicate with the Monero network your wallet needs to be connected to a Monero node. For best privacy it&apos;s recommended to run your own node.                         &lt;br&gt;&lt;br&gt;                         If you don&apos;t have the option to run an own node there&apos;s an option to connect to a remote node.</source>
-        <translation>Chcete-li komunikovat se sítí Monero, musí být vaše peněženka připojena k uzlu Monero. Pro nejlepší soukromí doporučujeme spustit vlastní uzel. &lt;br&gt;&lt;br&gt; Pokud nemáte možnost spustit vlastní uzel, je možnost připojení k vzdálenému uzlu.</translation>
+        <source>To be able to communicate with the Haven network your wallet needs to be connected to a Haven node. For best privacy it&apos;s recommended to run your own node.                         &lt;br&gt;&lt;br&gt;                         If you don&apos;t have the option to run an own node there&apos;s an option to connect to a remote node.</source>
+        <translation>Chcete-li komunikovat se sítí Haven, musí být vaše peněženka připojena k uzlu Haven. Pro nejlepší soukromí doporučujeme spustit vlastní uzel. &lt;br&gt;&lt;br&gt; Pokud nemáte možnost spustit vlastní uzel, je možnost připojení k vzdálenému uzlu.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDaemonSettings.qml" line="126"/>
@@ -2398,8 +2398,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     <name>WizardDonation</name>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="93"/>
-        <source>Monero development is solely supported by donations</source>
-        <translation>Vývoj Monero je podporován výhradně z dobrovolných příspěvků</translation>
+        <source>Haven development is solely supported by donations</source>
+        <translation>Vývoj Haven je podporován výhradně z dobrovolných příspěvků</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="113"/>
@@ -2413,8 +2413,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="164"/>
-        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Monero development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Monero development.</source>
-        <translation>Pro každou transakci je účtován malý transakční poplatek. Tato volba vám umožní přidat částku z tohoto poplatku do vaší transakce na podporu vývoje společnosti Monero. Například 50% autodonace převezme transakční poplatek 0,005 XMR a přidá 0,0025 XMR k podpoře vývoje společnosti Monero.</translation>
+        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Haven development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Haven development.</source>
+        <translation>Pro každou transakci je účtován malý transakční poplatek. Tato volba vám umožní přidat částku z tohoto poplatku do vaší transakce na podporu vývoje společnosti Haven. Například 50% autodonace převezme transakční poplatek 0,005 XMR a přidá 0,0025 XMR k podpoře vývoje společnosti Haven.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="176"/>
@@ -2423,8 +2423,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="194"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
-        <translation>Těžení zajišťuje síť Monero a platí také malou odměnu za vykonanou práci. Tato možnost umožní aplikaci Monero, pokud je počítač napájen ze sítě a je nečinný. Při pokračování v práci zastaví těžbu.</translation>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <translation>Těžení zajišťuje síť Haven a platí také malou odměnu za vykonanou práci. Tato možnost umožní aplikaci Haven, pokud je počítač napájen ze sítě a je nečinný. Při pokračování v práci zastaví těžbu.</translation>
     </message>
 </context>
 <context>
@@ -2508,8 +2508,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="375"/>
-        <source>USE MONERO</source>
-        <translation>POUŽÍVEJTE MONERO</translation>
+        <source>USE HAVEN</source>
+        <translation>POUŽÍVEJTE HAVEN</translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="392"/>
@@ -2613,8 +2613,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     <name>WizardOptions</name>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="74"/>
-        <source>Welcome to Monero!</source>
-        <translation>Vítejte v Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Vítejte v Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="85"/>
@@ -2687,8 +2687,8 @@ Prosím, aktualizujte jej nebo se připojte k jinému démonovi.</translation>
     <name>WizardWelcome</name>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="73"/>
-        <source>Welcome to Monero!</source>
-        <translation>Vítejte v Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Vítejte v Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="83"/>
@@ -5700,8 +5700,8 @@ Popis: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="1234"/>
-        <source>Monero</source>
-        <translation>Monero</translation>
+        <source>Haven</source>
+        <translation>Haven</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1284"/>
@@ -5774,7 +5774,7 @@ Popis: </translation>
     <message>
         <location filename="../monero/src/simplewallet/simplewallet.cpp" line="126"/>
         <source>The newly created transaction will not be relayed to the monero network</source>
-        <translation>Nově vytvořená transakce nebude rozeslána do sítě Monero</translation>
+        <translation>Nově vytvořená transakce nebude rozeslána do sítě Haven</translation>
     </message>
     <message>
         <location filename="../monero/src/simplewallet/simplewallet.cpp" line="168"/>
@@ -6125,7 +6125,7 @@ Popis: </translation>
         <location filename="../monero/src/wallet/wallet_args.cpp" line="136"/>
         <source>This is the command line monero wallet. It needs to connect to a monero
 daemon to work correctly.</source>
-        <translation>Jedná se o příkazového řádek peněženky Monero. Pro správnou funkci je třeba se připojit k Monero
+        <translation>Jedná se o příkazového řádek peněženky Haven. Pro správnou funkci je třeba se připojit k Haven
 démonu.</translation>
     </message>
     <message>

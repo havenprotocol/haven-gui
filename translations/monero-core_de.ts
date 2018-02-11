@@ -117,8 +117,8 @@
     <name>DaemonManagerDialog</name>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="93"/>
-        <source>Starting Monero daemon in %1 seconds</source>
-        <translation>Starte Monero-Daemon in %1 Sekunden</translation>
+        <source>Starting Haven daemon in %1 seconds</source>
+        <translation>Starte Haven-Daemon in %1 Sekunden</translation>
     </message>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="115"/>
@@ -430,8 +430,8 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="86"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
-        <translation>Mit Deinem Computer zu minen hilft dabei, das Monero-Netzwerk zu stärken. Je mehr Leute minen, desto schwieriger kann das Netzwerk angegriffen werden. Jeder kann helfen! &lt;br&gt; &lt;br&gt;Das Mining bietet Dir die Möglichkeit, Monero zu verdienen. Dein Computer errechnet dabei Hash-Werte für neue Blöcke. Wenn Du einen neuen Block findest, bekommst Du die Belohnung dafür. Viel Erfolg!</translation>
+        <source>Mining with your computer helps strengthen the Haven network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Haven. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+        <translation>Mit Deinem Computer zu minen hilft dabei, das Haven-Netzwerk zu stärken. Je mehr Leute minen, desto schwieriger kann das Netzwerk angegriffen werden. Jeder kann helfen! &lt;br&gt; &lt;br&gt;Das Mining bietet Dir die Möglichkeit, Haven zu verdienen. Dein Computer errechnet dabei Hash-Werte für neue Blöcke. Wenn Du einen neuen Block findest, bekommst Du die Belohnung dafür. Viel Erfolg!</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="96"/>
@@ -939,8 +939,8 @@
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="499"/>
-        <source>Embedded Monero version: </source>
-        <translation>Eingebundene Monero-Version: </translation>
+        <source>Embedded Haven version: </source>
+        <translation>Eingebundene Haven-Version: </translation>
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="509"/>
@@ -1379,7 +1379,7 @@
     </message>
     <message>
         <location filename="../pages/Transfer.qml" line="719"/>
-        <source>Connected daemon is not compatible with GUI. 
+        <source>Connected daemon is not compatible with GUI.
 Please upgrade or connect to another daemon</source>
         <translation>Verbundener Daemon ist nicht mit der GUI kompatibel.
 Bitte aktualisiere oder verbinde einen anderen Daemon</translation>
@@ -1574,12 +1574,12 @@ Ringgröße: </translation>
     <name>WizardConfigure</name>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="79"/>
-        <source>We’re almost there - let’s just configure some Monero preferences</source>
+        <source>We’re almost there - let’s just configure some Haven preferences</source>
         <translation>Fast geschafft – lass uns noch ein paar Einstellungen vornehmen</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="97"/>
-        <source>Kickstart the Monero blockchain?</source>
+        <source>Kickstart the Haven blockchain?</source>
         <translation>Die Blockchain ankurbeln?</translation>
     </message>
     <message>
@@ -1594,7 +1594,7 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="144"/>
-        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Monero instance. However, storing the full blockchain is beneficial to the security of the Monero network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
+        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Haven instance. However, storing the full blockchain is beneficial to the security of the Haven network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
         <translation>Der Sparmodus verwendet deutlich weniger Festplattenspeicherplatz, aber dieselbe Menge an Bandbreite. Um das Netzwerk und Deine Privatsphähre zu schützen, solltest Du deshalb eine Kopie der Blockchain haben und diesen Modus nur verwenden, falls nicht ausreichend Speicherplatz verfügbar ist.</translation>
     </message>
     <message>
@@ -1604,7 +1604,7 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="175"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
         <translation>Mining schützt das Netzwerk und bezahlt Dich dafür im Gegenzug. Diese Option sorgt dafür, dass Dein Computer mined während Du ihn nicht verwendest. Sobald Du ihn wieder verwendest, wird der Miningvorgang unterbrochen.</translation>
     </message>
 </context>
@@ -1628,8 +1628,8 @@ Ringgröße: </translation>
     <name>WizardDonation</name>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="93"/>
-        <source>Monero development is solely supported by donations</source>
-        <translation>Die Weiterentwicklung von Monero wird alleine durch Spenden finanziert</translation>
+        <source>Haven development is solely supported by donations</source>
+        <translation>Die Weiterentwicklung von Haven wird alleine durch Spenden finanziert</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="113"/>
@@ -1643,8 +1643,8 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="164"/>
-        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Monero development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Monero development.</source>
-        <translation>Für jede Transaktion fällt eine kleine Gebühr an. Mit dieser Option kannst Du diese Gebühr um einen zusätzlichen Prozentsatz erhöhen, um die Entwicklung von Monero voranzutreiben. Bei einer 50-%igen automatischen Spende und einer Transaktionsgebühr von 0.005 XMR würden somit zusätzliche 0.0025 der Entwicklung von Monero zukommen.</translation>
+        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Haven development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Haven development.</source>
+        <translation>Für jede Transaktion fällt eine kleine Gebühr an. Mit dieser Option kannst Du diese Gebühr um einen zusätzlichen Prozentsatz erhöhen, um die Entwicklung von Haven voranzutreiben. Bei einer 50-%igen automatischen Spende und einer Transaktionsgebühr von 0.005 XMR würden somit zusätzliche 0.0025 der Entwicklung von Haven zukommen.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="176"/>
@@ -1653,7 +1653,7 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="194"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
         <translation>Mining schützt das Netzwerk und bezahlt Dich dafür im Gegenzug. Diese Option sorgt dafür, dass Dein Computer mined während Du ihn nicht verwendest. Sobald Du ihn wieder verwendest, wird der Miningvorgang unterbrochen.</translation>
     </message>
 </context>
@@ -1738,8 +1738,8 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="366"/>
-        <source>USE MONERO</source>
-        <translation>VERWENDE MONERO</translation>
+        <source>USE HAVEN</source>
+        <translation>VERWENDE HAVEN</translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="383"/>
@@ -1753,7 +1753,7 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="394"/>
-        <source>The view only wallet has been created. You can open it by closing this current wallet, clicking the &quot;Open wallet from file&quot; option, and selecting the view wallet in: 
+        <source>The view only wallet has been created. You can open it by closing this current wallet, clicking the &quot;Open wallet from file&quot; option, and selecting the view wallet in:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1833,8 +1833,8 @@ Ringgröße: </translation>
     <name>WizardOptions</name>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="87"/>
-        <source>Welcome to Monero!</source>
-        <translation>Willkommen zu Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Willkommen zu Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="98"/>
@@ -1908,8 +1908,8 @@ Ringgröße: </translation>
     <name>WizardWelcome</name>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="79"/>
-        <source>Welcome to Monero!</source>
-        <translation>Willkommen bei Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Willkommen bei Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="89"/>
@@ -1966,8 +1966,8 @@ Ringgröße: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="723"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Diese Adresse hat %1 Monero empfangen, aber die Transaktion wurde noch nicht gemined</translation>
+        <source>This address received %1 haven, but the transaction is not yet mined</source>
+        <translation>Diese Adresse hat %1 Haven empfangen, aber die Transaktion wurde noch nicht gemined</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1317"/>
@@ -2128,8 +2128,8 @@ Beschreibung: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="728"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Diese Adresse hat %1 Monero erhalten, mit %2 Bestätigung(en).</translation>
+        <source>This address received %1 haven, with %2 confirmation(s).</source>
+        <translation>Diese Adresse hat %1 Haven erhalten, mit %2 Bestätigung(en).</translation>
     </message>
     <message>
         <location filename="../main.qml" line="744"/>
@@ -2153,8 +2153,8 @@ Beschreibung: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="1017"/>
-        <source>Monero</source>
-        <translation>Monero</translation>
+        <source>Haven</source>
+        <translation>Haven</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1065"/>

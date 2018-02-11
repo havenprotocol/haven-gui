@@ -244,7 +244,6 @@ ApplicationWindow {
             currentWallet.transactionCreated.disconnect(onTransactionCreated)
             currentWallet.connectionStatusChanged.disconnect(onWalletConnectionStatusChanged)
             middlePanel.paymentClicked.disconnect(handlePayment);
-            middlePanel.sweepUnmixableClicked.disconnect(handleSweepUnmixable);
             middlePanel.getProofClicked.disconnect(handleGetProof);
             middlePanel.checkProofClicked.disconnect(handleCheckProof);
         }
@@ -277,7 +276,7 @@ ApplicationWindow {
         currentWallet.transactionCreated.connect(onTransactionCreated)
         currentWallet.connectionStatusChanged.connect(onWalletConnectionStatusChanged)
         middlePanel.paymentClicked.connect(handlePayment);
-        middlePanel.sweepUnmixableClicked.connect(handleSweepUnmixable);
+
         middlePanel.getProofClicked.connect(handleGetProof);
         middlePanel.checkProofClicked.connect(handleCheckProof);
 
@@ -504,7 +503,7 @@ ApplicationWindow {
         currentWallet.startRefresh();
         daemonRunning = false;
         informationPopup.title = qsTr("Daemon failed to start") + translationManager.emptyString;
-        informationPopup.text  = qsTr("Please check your wallet and daemon log for errors. You can also try to start %1 manually.").arg((isWindows)? "monerod.exe" : "monerod")
+        informationPopup.text  = qsTr("Please check your wallet and daemon log for errors. You can also try to start %1 manually.").arg((isWindows)? "havend.exe" : "havend")
         informationPopup.icon  = StandardIcon.Critical
         informationPopup.onCloseCallback = null
         informationPopup.open();
@@ -668,44 +667,6 @@ ApplicationWindow {
     }
 
 
-    function handleSweepUnmixable() {
-        console.log("Creating transaction: ")
-
-        transaction = currentWallet.createSweepUnmixableTransaction();
-        if (transaction.status !== PendingTransaction.Status_Ok) {
-            console.error("Can't create transaction: ", transaction.errorString);
-            informationPopup.title = qsTr("Error") + translationManager.emptyString;
-            informationPopup.text  = qsTr("Can't create transaction: ") + transaction.errorString
-            informationPopup.icon  = StandardIcon.Critical
-            informationPopup.onCloseCallback = null
-            informationPopup.open();
-            // deleting transaction object, we don't want memleaks
-            currentWallet.disposeTransaction(transaction);
-
-        } else if (transaction.txCount == 0) {
-            informationPopup.title = qsTr("Error") + translationManager.emptyString
-            informationPopup.text  = qsTr("No unmixable outputs to sweep") + translationManager.emptyString
-            informationPopup.icon = StandardIcon.Information
-            informationPopup.onCloseCallback = null
-            informationPopup.open()
-            // deleting transaction object, we don't want memleaks
-            currentWallet.disposeTransaction(transaction);
-        } else {
-            console.log("Transaction created, amount: " + walletManager.displayAmount(transaction.amount)
-                    + ", fee: " + walletManager.displayAmount(transaction.fee));
-
-            // here we show confirmation popup;
-
-            transactionConfirmationPopup.title = qsTr("Confirmation") + translationManager.emptyString
-            transactionConfirmationPopup.text  = qsTr("Please confirm transaction:\n")
-                        + qsTr("\n\nAmount: ") + walletManager.displayAmount(transaction.amount)
-                        + qsTr("\nFee: ") + walletManager.displayAmount(transaction.fee)
-                        + translationManager.emptyString
-            transactionConfirmationPopup.icon = StandardIcon.Question
-            transactionConfirmationPopup.open()
-            // committing transaction
-        }
-    }
 
     // called after user confirms transaction
     function handleTransactionConfirmed(fileName) {

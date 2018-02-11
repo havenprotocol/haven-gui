@@ -117,8 +117,8 @@
     <name>DaemonManagerDialog</name>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="93"/>
-        <source>Starting Monero daemon in %1 seconds</source>
-        <translation>Spustenie Monero démona za %1 sekúnd</translation>
+        <source>Starting Haven daemon in %1 seconds</source>
+        <translation>Spustenie Haven démona za %1 sekúnd</translation>
     </message>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="115"/>
@@ -430,8 +430,8 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="86"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
-        <translation>Ťažba s Vašim počítačom pomáha posilniť sieť Monero. Čím viac ľudí ťaží, tým je náročnejšie zaútočiť na sieť, a každý malý kúsok pomáha.&lt;br&gt; &lt;br&gt;Ťažba Vám taktiež dáva malú šancu zarobiť nejaké Monero. Váš počítač bude vytvárať haše hľadaním riešenia v bloku. Ak nájdete blok, dostanete s tým súvisiacu odmenu. Veľa šťastia!</translation>
+        <source>Mining with your computer helps strengthen the Haven network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Haven. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+        <translation>Ťažba s Vašim počítačom pomáha posilniť sieť Haven. Čím viac ľudí ťaží, tým je náročnejšie zaútočiť na sieť, a každý malý kúsok pomáha.&lt;br&gt; &lt;br&gt;Ťažba Vám taktiež dáva malú šancu zarobiť nejaké Haven. Váš počítač bude vytvárať haše hľadaním riešenia v bloku. Ak nájdete blok, dostanete s tým súvisiacu odmenu. Veľa šťastia!</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="96"/>
@@ -908,8 +908,8 @@
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="499"/>
-        <source>Embedded Monero version: </source>
-        <translation>Verzia integrovaného Monero: </translation>
+        <source>Embedded Haven version: </source>
+        <translation>Verzia integrovaného Haven: </translation>
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="509"/>
@@ -1574,13 +1574,13 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     <name>WizardConfigure</name>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="79"/>
-        <source>We’re almost there - let’s just configure some Monero preferences</source>
-        <translation>Už sme skoro tam - ešte nakonfigurujte niektoré predvoľby pre Monero</translation>
+        <source>We’re almost there - let’s just configure some Haven preferences</source>
+        <translation>Už sme skoro tam - ešte nakonfigurujte niektoré predvoľby pre Haven</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="97"/>
-        <source>Kickstart the Monero blockchain?</source>
-        <translation>Nakopnúť Monero blockchain?</translation>
+        <source>Kickstart the Haven blockchain?</source>
+        <translation>Nakopnúť Haven blockchain?</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="115"/>
@@ -1594,8 +1594,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="144"/>
-        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Monero instance. However, storing the full blockchain is beneficial to the security of the Monero network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
-        <translation>Režim konzervácie disku používa podstatne menej diskového priestoru, ale rovnakú rýchlosť pripojenia do internetu ako bežná inštancia Monero. Avšak uloženie celého blockchain-u je prínosom pre bezpečnosť siete Monero. Ak používate zariadenie s obmedzeným priestorom na disku, táto možnosť je vhodná pre Vás.</translation>
+        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Haven instance. However, storing the full blockchain is beneficial to the security of the Haven network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
+        <translation>Režim konzervácie disku používa podstatne menej diskového priestoru, ale rovnakú rýchlosť pripojenia do internetu ako bežná inštancia Haven. Avšak uloženie celého blockchain-u je prínosom pre bezpečnosť siete Haven. Ak používate zariadenie s obmedzeným priestorom na disku, táto možnosť je vhodná pre Vás.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="157"/>
@@ -1604,8 +1604,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="175"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
-        <translation>Ťažba zabezpečuje sieť Monero, a taktiež vypláca malú odmenu za vykonanú prácu. Toto Vám umožní ťažiť Monero keď je Váš počítač napájaný zo siete a je nečinný. Keď budete pokračovať v práci, ťažba sa zastaví.</translation>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <translation>Ťažba zabezpečuje sieť Haven, a taktiež vypláca malú odmenu za vykonanú prácu. Toto Vám umožní ťažiť Haven keď je Váš počítač napájaný zo siete a je nečinný. Keď budete pokračovať v práci, ťažba sa zastaví.</translation>
     </message>
 </context>
 <context>
@@ -1628,8 +1628,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     <name>WizardDonation</name>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="93"/>
-        <source>Monero development is solely supported by donations</source>
-        <translation>Vývoj softvéru Monero je podporovaný výhradne darmi</translation>
+        <source>Haven development is solely supported by donations</source>
+        <translation>Vývoj softvéru Haven je podporovaný výhradne darmi</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="113"/>
@@ -1643,8 +1643,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="164"/>
-        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Monero development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Monero development.</source>
-        <translation>Pre každú transakciu sa účtuje malý poplatok za transakciu. Táto možnosť Vám umožní pridať ďalšiu sumu, ktorá predstavuje percento z tohto poplatku, k Vašej transakcii na podporu vývoja softvéru Monero. Napríklad 50% auto-donácia vezme transakčný poplatok 0,005 XMR a pridá 0,0025 XMR na podporu vývoja softvéru Monero.</translation>
+        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Haven development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Haven development.</source>
+        <translation>Pre každú transakciu sa účtuje malý poplatok za transakciu. Táto možnosť Vám umožní pridať ďalšiu sumu, ktorá predstavuje percento z tohto poplatku, k Vašej transakcii na podporu vývoja softvéru Haven. Napríklad 50% auto-donácia vezme transakčný poplatok 0,005 XMR a pridá 0,0025 XMR na podporu vývoja softvéru Haven.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="176"/>
@@ -1653,8 +1653,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="194"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
-        <translation>Ťažba zabezpečuje sieť Monero, a taktiež vypláca malú odmenu za vykonanú prácu. Toto Vám umožní ťažiť Monero keď je Váš počítač napájaný zo siete a je nečinný. Keď budete pokračovať v práci, ťažba sa zastaví.</translation>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <translation>Ťažba zabezpečuje sieť Haven, a taktiež vypláca malú odmenu za vykonanú prácu. Toto Vám umožní ťažiť Haven keď je Váš počítač napájaný zo siete a je nečinný. Keď budete pokračovať v práci, ťažba sa zastaví.</translation>
     </message>
 </context>
 <context>
@@ -1738,8 +1738,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="366"/>
-        <source>USE MONERO</source>
-        <translation>POUŽIŤ MONERO</translation>
+        <source>USE HAVEN</source>
+        <translation>POUŽIŤ HAVEN</translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="383"/>
@@ -1834,8 +1834,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     <name>WizardOptions</name>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="87"/>
-        <source>Welcome to Monero!</source>
-        <translation>Vitajte v Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Vitajte v Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="98"/>
@@ -1909,8 +1909,8 @@ Prosím aktualizujte, alebo pripojte k inému démonovi</translation>
     <name>WizardWelcome</name>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="79"/>
-        <source>Welcome to Monero!</source>
-        <translation>Vitajte v Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Vitajte v Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="89"/>
@@ -2048,8 +2048,8 @@ Ringsize: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="728"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Táto adresa prijala %1 monero, s %2 potvrdeniami.</translation>
+        <source>This address received %1 haven, with %2 confirmation(s).</source>
+        <translation>Táto adresa prijala %1 haven, s %2 potvrdeniami.</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1317"/>
@@ -2124,8 +2124,8 @@ Popis: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="723"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Táto adresa prijala %1 monero, ale transakcia ešte nebola vyťažená</translation>
+        <source>This address received %1 haven, but the transaction is not yet mined</source>
+        <translation>Táto adresa prijala %1 haven, ale transakcia ešte nebola vyťažená</translation>
     </message>
     <message>
         <location filename="../main.qml" line="732"/>
@@ -2154,8 +2154,8 @@ Popis: </translation>
     </message>
     <message>
         <location filename="../main.qml" line="1017"/>
-        <source>Monero</source>
-        <translation>Monero</translation>
+        <source>Haven</source>
+        <translation>Haven</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1065"/>

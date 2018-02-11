@@ -117,8 +117,8 @@
     <name>DaemonManagerDialog</name>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="93"/>
-        <source>Starting Monero daemon in %1 seconds</source>
-        <translation>Starter Monero daemon om %1 sekunder</translation>
+        <source>Starting Haven daemon in %1 seconds</source>
+        <translation>Starter Haven daemon om %1 sekunder</translation>
     </message>
     <message>
         <location filename="../components/DaemonManagerDialog.qml" line="115"/>
@@ -430,8 +430,8 @@
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="86"/>
-        <source>Mining with your computer helps strengthen the Monero network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Monero. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
-        <translation>At mine med din computer hjælper med at styrke Monero netværket. Jo flere personer der miner, jo sværere er det for netværket at blive angrebet, og hver eneste lille del hjælper.&lt;br&gt; &lt;br&gt; At mine giver dig også en lille chance for at tjene nogle Monero. Hvis du finder en blok, ville du få den associaserede belønning. Held og lykke!</translation>
+        <source>Mining with your computer helps strengthen the Haven network. The more that people mine, the harder it is for the network to be attacked, and every little bit helps.&lt;br&gt; &lt;br&gt;Mining also gives you a small chance to earn some Haven. Your computer will create hashes looking for block solutions. If you find a block, you will get the associated reward. Good luck!</source>
+        <translation>At mine med din computer hjælper med at styrke Haven netværket. Jo flere personer der miner, jo sværere er det for netværket at blive angrebet, og hver eneste lille del hjælper.&lt;br&gt; &lt;br&gt; At mine giver dig også en lille chance for at tjene nogle Haven. Hvis du finder en blok, ville du få den associaserede belønning. Held og lykke!</translation>
     </message>
     <message>
         <location filename="../pages/Mining.qml" line="96"/>
@@ -908,8 +908,8 @@
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="499"/>
-        <source>Embedded Monero version: </source>
-        <translation>Indlejret Monero Version: </translation>
+        <source>Embedded Haven version: </source>
+        <translation>Indlejret Haven Version: </translation>
     </message>
     <message>
         <location filename="../pages/Settings.qml" line="509"/>
@@ -1567,13 +1567,13 @@ Please upgrade or connect to another daemon</source>
     <name>WizardConfigure</name>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="79"/>
-        <source>We’re almost there - let’s just configure some Monero preferences</source>
-        <translation>Vi er der næsten - lad os lige konfigurere nogle Monero preferencer</translation>
+        <source>We’re almost there - let’s just configure some Haven preferences</source>
+        <translation>Vi er der næsten - lad os lige konfigurere nogle Haven preferencer</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="97"/>
-        <source>Kickstart the Monero blockchain?</source>
-        <translation>Kickstart Monero blockchainen?</translation>
+        <source>Kickstart the Haven blockchain?</source>
+        <translation>Kickstart Haven blockchainen?</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="115"/>
@@ -1587,8 +1587,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="144"/>
-        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Monero instance. However, storing the full blockchain is beneficial to the security of the Monero network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
-        <translation>Disk besparende tilstand bruger væsenligt mindre disk-plads, men det samme båndbredde som en regulær Monero instans. dog ved at gemme hele blockchainen styrker det sikkerheden af Monero's netværk. Hvis du er på en enhed med begrænset disk plads, så er denne valgmulighed for dig.</translation>
+        <source>Disk conservation mode uses substantially less disk-space, but the same amount of bandwidth as a regular Haven instance. However, storing the full blockchain is beneficial to the security of the Haven network. If you are on a device with limited disk space, then this option is appropriate for you.</source>
+        <translation>Disk besparende tilstand bruger væsenligt mindre disk-plads, men det samme båndbredde som en regulær Haven instans. dog ved at gemme hele blockchainen styrker det sikkerheden af Haven's netværk. Hvis du er på en enhed med begrænset disk plads, så er denne valgmulighed for dig.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="157"/>
@@ -1597,8 +1597,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardConfigure.qml" line="175"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
-        <translation>At mine styrker Monero's netværk, og betaler også en lille belønning for arbejdet der bliver gjort. Denne mulighed ville lade Monero mine når din computer er på strøm og inaktiv, og ville stoppe med at mine når du ikke længere er inaktiv.</translation>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <translation>At mine styrker Haven's netværk, og betaler også en lille belønning for arbejdet der bliver gjort. Denne mulighed ville lade Haven mine når din computer er på strøm og inaktiv, og ville stoppe med at mine når du ikke længere er inaktiv.</translation>
     </message>
 </context>
 <context>
@@ -1621,8 +1621,8 @@ Please upgrade or connect to another daemon</source>
     <name>WizardDonation</name>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="93"/>
-        <source>Monero development is solely supported by donations</source>
-        <translation>Monero's udvikling er udelukkende kørt via donationer</translation>
+        <source>Haven development is solely supported by donations</source>
+        <translation>Haven's udvikling er udelukkende kørt via donationer</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="113"/>
@@ -1636,8 +1636,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="164"/>
-        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Monero development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Monero development.</source>
-        <translation>For hver transaktion, ville der blive trukket et lille gebyr. Denne mulighed lader dig tilføje et ekstra beløb, som en procentdel af den gebyr til din transaktion for at støtte Monero udvikling. F.eks. ville en 50% autodonation tag en transaktions gebyr på 0,005 XMR og lægge 0,0025 XMR oveni for at støtte Monero's udvikling.</translation>
+        <source>For every transaction, a small transaction fee is charged. This option lets you add an additional amount, as a percentage of that fee, to your transaction to support Haven development. For instance, a 50% autodonation take a transaction fee of 0.005 XMR and add a 0.0025 XMR to support Haven development.</source>
+        <translation>For hver transaktion, ville der blive trukket et lille gebyr. Denne mulighed lader dig tilføje et ekstra beløb, som en procentdel af den gebyr til din transaktion for at støtte Haven udvikling. F.eks. ville en 50% autodonation tag en transaktions gebyr på 0,005 XMR og lægge 0,0025 XMR oveni for at støtte Haven's udvikling.</translation>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="176"/>
@@ -1646,8 +1646,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardDonation.qml" line="194"/>
-        <source>Mining secures the Monero network, and also pays a small reward for the work done. This option will let Monero mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
-        <translation>>At mine styrker Monero's netværk, og betaler også en lille belønning for arbejdet der bliver gjort. Denne mulighed ville lade Monero mine når din computer er på strøm og inaktiv, og ville stoppe når du ikke længere er inaktiv.</translation>
+        <source>Mining secures the Haven network, and also pays a small reward for the work done. This option will let Haven mine when your computer is on mains power and is idle. It will stop mining when you continue working.</source>
+        <translation>>At mine styrker Haven's netværk, og betaler også en lille belønning for arbejdet der bliver gjort. Denne mulighed ville lade Haven mine når din computer er på strøm og inaktiv, og ville stoppe når du ikke længere er inaktiv.</translation>
     </message>
 </context>
 <context>
@@ -1731,8 +1731,8 @@ Please upgrade or connect to another daemon</source>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="366"/>
-        <source>USE MONERO</source>
-        <translation>BRUG MONERO</translation>
+        <source>USE HAVEN</source>
+        <translation>BRUG HAVEN</translation>
     </message>
     <message>
         <location filename="../wizard/WizardMain.qml" line="383"/>
@@ -1827,8 +1827,8 @@ Please upgrade or connect to another daemon</source>
     <name>WizardOptions</name>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="87"/>
-        <source>Welcome to Monero!</source>
-        <translation>Velkommen til Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Velkommen til Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardOptions.qml" line="98"/>
@@ -1902,8 +1902,8 @@ Please upgrade or connect to another daemon</source>
     <name>WizardWelcome</name>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="79"/>
-        <source>Welcome to Monero!</source>
-        <translation>Velkommen til Monero!</translation>
+        <source>Welcome to Haven!</source>
+        <translation>Velkommen til Haven!</translation>
     </message>
     <message>
         <location filename="../wizard/WizardWelcome.qml" line="89"/>
@@ -2033,8 +2033,8 @@ Ringsize: </source>
     </message>
     <message>
         <location filename="../main.qml" line="728"/>
-        <source>This address received %1 monero, with %2 confirmation(s).</source>
-        <translation>Denne adresse modtog %1 monero, med %2 bekræftelse(r).</translation>
+        <source>This address received %1 haven, with %2 confirmation(s).</source>
+        <translation>Denne adresse modtog %1 haven, med %2 bekræftelse(r).</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1317"/>
@@ -2054,7 +2054,7 @@ Ringsize: </source>
     <message>
         <location filename="../main.qml" line="1355"/>
         <source>New version of haven-wallet-gui is available: %1&lt;br&gt;%2</source>
-        <translation>Ny version af monero-tegnebog-gui er tilgængelig: %1&lt;br&gt;%2 </translation>
+        <translation>Ny version af haven-tegnebog-gui er tilgængelig: %1&lt;br&gt;%2 </translation>
     </message>
     <message>
         <location filename="../main.qml" line="523"/>
@@ -2106,8 +2106,8 @@ Description: </source>
     </message>
     <message>
         <location filename="../main.qml" line="723"/>
-        <source>This address received %1 monero, but the transaction is not yet mined</source>
-        <translation>Denne adresse modtog %1 monero, men transaktionen er ikke minet endnu</translation>
+        <source>This address received %1 haven, but the transaction is not yet mined</source>
+        <translation>Denne adresse modtog %1 haven, men transaktionen er ikke minet endnu</translation>
     </message>
     <message>
         <location filename="../main.qml" line="732"/>
@@ -2136,8 +2136,8 @@ Description: </source>
     </message>
     <message>
         <location filename="../main.qml" line="1017"/>
-        <source>Monero</source>
-        <translation>Monero</translation>
+        <source>Haven</source>
+        <translation>Haven</translation>
     </message>
     <message>
         <location filename="../main.qml" line="1065"/>

@@ -514,7 +514,7 @@ Rectangle {
         TextBlock {
             id: guiMoneroVersion
             Layout.fillWidth: true
-            text: qsTr("Embedded Monero version: ") + Version.GUI_MONERO_VERSION + translationManager.emptyString
+            text: qsTr("Embedded Haven version: ") + Version.GUI_MONERO_VERSION + translationManager.emptyString
         }
         TextBlock {
             id: restoreHeightText

@@ -1,16 +1,16 @@
-; Monero Helium Hydra GUI Wallet Installer for Windows
+; Haven Hurricane GUI Wallet Installer for Windows
 ; Copyright (c) 2014-2017, The Monero Project
 ; See LICENSE
 
 [Setup]
-AppName=Monero GUI Wallet
+AppName=Haven GUI Wallet
 ; For InnoSetup this is the property that uniquely identifies the application as such
 ; Thus it's important to keep this stable over releases
 ; With a different "AppName" InnoSetup would treat a mere update as a completely new application and thus mess up
 
-AppVersion=0.11.1.0
-DefaultDirName={pf}\Monero GUI Wallet
-DefaultGroupName=Monero GUI Wallet
+AppVersion=1.0.0
+DefaultDirName={pf}\Haven GUI Wallet
+DefaultGroupName=Haven GUI Wallet
 UninstallDisplayIcon={app}\haven-wallet-gui.exe
 PrivilegesRequired=admin
 ArchitecturesInstallIn64BitMode=x64
@@ -39,43 +39,43 @@ Name: "en"; MessagesFile: "compiler:Default.isl"
 ; .exe/.dll file possibly with version info).
 ;
 ; This is far more robust than relying on version info or on file dates (flag "comparetimestamp").
-; As of version 0.11.1.0, the Monero .exe files do not carry version info anyway in their .exe headers.
+; As of version 0.11.1.0, the haven .exe files do not carry version info anyway in their .exe headers.
 ; The only small drawback seems to be somewhat longer update times because each and every file is
 ; copied again, even if already present with correct file date and identical content.
 ;
 ; Note that it would be very dangerous to use "ignoreversion" on files that may be shared with other
-; applications somehow. Luckily this is no issue here because ALL files are "private" to Monero.
+; applications somehow. Luckily this is no issue here because ALL files are "private" to haven.
 
 Source: "ReadMe.htm"; DestDir: "{app}"; Flags: ignoreversion
 Source: "FinishImage.bmp"; Flags: dontcopy
 
-; Monero GUI wallet
+; haven GUI wallet
 Source: "bin\haven-wallet-gui.exe"; DestDir: "{app}"; Flags: ignoreversion
 
-; Monero GUI wallet log file
+; haven GUI wallet log file
 ; The GUI wallet does not have the "--log-file" command-line option of the CLI wallet and insists to put the .log beside the .exe
 ; so pre-create the file and give the necessary permissions to the wallet to write into it
 ; Flag is "onlyifdoesntexist": We do not want to overwrite an already existing log
 Source: "haven-wallet-gui.log"; DestDir: "{app}"; Flags: onlyifdoesntexist; Permissions: users-modify
 
-; Monero CLI wallet
-Source: "bin\monero-wallet-cli.exe"; DestDir: "{app}"; Flags: ignoreversion
+; haven CLI wallet
+Source: "bin\haven-wallet-cli.exe"; DestDir: "{app}"; Flags: ignoreversion
 
-; Monero wallet RPC interface implementation
-Source: "bin\monero-wallet-rpc.exe"; DestDir: "{app}"; Flags: ignoreversion
+; Haven wallet RPC interface implementation
+Source: "bin\haven-wallet-rpc.exe"; DestDir: "{app}"; Flags: ignoreversion
 
-; Monero daemon
-Source: "bin\monerod.exe"; DestDir: "{app}"; Flags: ignoreversion
+; Haven daemon
+Source: "bin\havend.exe"; DestDir: "{app}"; Flags: ignoreversion
 
-; Monero daemon wrapped in a batch file that stops before the text window closes, to see any error messages
-Source: "monero-daemon.bat"; DestDir: "{app}"; Flags: ignoreversion;
+; Haven daemon wrapped in a batch file that stops before the text window closes, to see any error messages
+Source: "haven-daemon.bat"; DestDir: "{app}"; Flags: ignoreversion;
 
-; Monero blockchain utilities
-Source: "bin\monero-blockchain-export.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "bin\monero-blockchain-import.exe"; DestDir: "{app}"; Flags: ignoreversion
+; Haven blockchain utilities
+Source: "bin\haven-blockchain-export.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "bin\haven-blockchain-import.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 ; was present in 0.10.3.1, not present anymore in 0.11.1.0
-; Source: "bin\monero-utils-deserialize.exe"; DestDir: "{app}"; Flags: ignoreversion
+; Source: "bin\haven-utils-deserialize.exe"; DestDir: "{app}"; Flags: ignoreversion
 
 ; Various .qm files for translating the wallet UI "on the fly" into all supported languages
 Source: "bin\translations\*"; DestDir: "{app}\translations"; Flags: recursesubdirs ignoreversion
@@ -101,28 +101,28 @@ Source: "bin\audio\*"; DestDir: "{app}\audio"; Flags: recursesubdirs ignoreversi
 ; Qt bearer / network connection management
 Source: "bin\bearer\*"; DestDir: "{app}\bearer"; Flags: recursesubdirs ignoreversion
 
-; Qt Windows platform plugin	
+; Qt Windows platform plugin
 Source: "bin\platforms\qwindows.dll"; DestDir: "{app}\platforms"; Flags: ignoreversion
 
-; Qt support for SVG icons	
+; Qt support for SVG icons
 Source: "bin\iconengines\*"; DestDir: "{app}\iconengines"; Flags: recursesubdirs ignoreversion
 
-; Qt support for various image formats (JPEG, BMP, SVG etc)	
+; Qt support for various image formats (JPEG, BMP, SVG etc)
 Source: "bin\imageformats\*"; DestDir: "{app}\imageformats"; Flags: recursesubdirs ignoreversion
 
-; Qt multimedia support	
+; Qt multimedia support
 Source: "bin\QtMultimedia\*"; DestDir: "{app}\QtMultimedia"; Flags: recursesubdirs ignoreversion
 Source: "bin\mediaservice\*"; DestDir: "{app}\mediaservice"; Flags: recursesubdirs ignoreversion
 
 ; Qt support for "m3u" playlists
-; candidate for elimination? Don't think the GUI wallet needs such playlists	
+; candidate for elimination? Don't think the GUI wallet needs such playlists
 Source: "bin\playlistformats\*"; DestDir: "{app}\playlistformats"; Flags: recursesubdirs ignoreversion
 
 ; Qt graphical effects as part of the core runtime, effects like blurring and blending
 Source: "bin\QtGraphicalEffects\*"; DestDir: "{app}\QtGraphicalEffects"; Flags: recursesubdirs ignoreversion
 
 ; Some more Qt graphical effects
-; "private" as a name for this directory looks a little strange. Historical reasons?	
+; "private" as a name for this directory looks a little strange. Historical reasons?
 Source: "bin\private\*"; DestDir: "{app}\private"; Flags: recursesubdirs ignoreversion
 
 ; Qt QML files
@@ -193,7 +193,7 @@ Source: "bin\liblcms2-2.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; XZ Utils, LZMA compression library
 Source: "bin\liblzma-5.dll"; DestDir: "{app}"; Flags: ignoreversion
 
-; MNG / Portable Network Graphics ("animated PNG") 
+; MNG / Portable Network Graphics ("animated PNG")
 Source: "bin\libmng-2.dll"; DestDir: "{app}"; Flags: ignoreversion
 
 ; PCRE, Perl Compatible Regular Expressions
@@ -247,8 +247,8 @@ begin
   WizardForm.WizardBitmapImage2.Bitmap.LoadFromFile(ExpandConstant('{tmp}\FinishImage.bmp'));
 
   // Additional wizard page for entering a special blockchain location
-  blockChainDefaultDir := ExpandConstant('{commonappdata}\bitmonero');
-  s := 'The default folder to store the Monero blockchain is ' + blockChainDefaultDir;
+  blockChainDefaultDir := ExpandConstant('{commonappdata}\haven');
+  s := 'The default folder to store the Haven blockchain is ' + blockChainDefaultDir;
   s := s + '. As this will need more than 30 GB of free space, you may want to use a folder on a different drive.';
   s := s + ' If yes, specify that folder here.';
 
@@ -297,7 +297,7 @@ end;
 function DaemonLog(Param: String) : String;
 // Full filename of the log of the daemon
 begin
-  Result := BlockChainDir('') + '\bitmonero.log';
+  Result := BlockChainDir('') + '\haven.log';
   // No quotes for filename with blanks as this is never used as part of a command line
 end;
 
@@ -324,12 +324,12 @@ procedure CurStepChanged(CurStep: TSetupStep);
 var s: TArrayOfString;
 begin
   if CurStep = ssPostInstall then begin
-    // Re-build "monero-daemon.bat" according to actual install and blockchain directory used
+    // Re-build "haven-daemon.bat" according to actual install and blockchain directory used
     SetArrayLength(s, 3);
-    s[0] := 'REM Execute the Monero daemon and then stay with window open after it exits';
-    s[1] := '"' + ExpandConstant('{app}\monerod.exe') + '" ' + DaemonFlags('');
+    s[0] := 'REM Execute the Haven daemon and then stay with window open after it exits';
+    s[1] := '"' + ExpandConstant('{app}\havend.exe') + '" ' + DaemonFlags('');
     s[2] := 'PAUSE';
-    SaveStringsToFile(ExpandConstant('{app}\monero-daemon.bat'), s, false); 
+    SaveStringsToFile(ExpandConstant('{app}\haven-daemon.bat'), s, false);
   end;
 end;
 
@@ -345,7 +345,7 @@ end;
 
 
 [Icons]
-; Icons in the "Monero GUI Wallet" program group
+; Icons in the "Haven GUI Wallet" program group
 ; Windows will almost always display icons in alphabetical order, per level, so specify the text accordingly
 Name: "{group}\GUI Wallet"; Filename: "{app}\haven-wallet-gui.exe"
 Name: "{group}\Uninstall GUI Wallet"; Filename: "{uninstallexe}"
@@ -353,23 +353,23 @@ Name: "{group}\Uninstall GUI Wallet"; Filename: "{uninstallexe}"
 ; Sub-folder "Utilities";
 ; Note that Windows 10, unlike Windows 7, ignores such sub-folders completely
 ; and insists on displaying ALL icons on one single level
-Name: "{group}\Utilities\Monero Daemon"; Filename: "{app}\monerod.exe"; Parameters: {code:DaemonFlags}
+Name: "{group}\Utilities\Haven Daemon"; Filename: "{app}\havend.exe"; Parameters: {code:DaemonFlags}
 Name: "{group}\Utilities\Read Me"; Filename: "{app}\ReadMe.htm"
 
 ; CLI wallet: Needs a working directory ("Start in:") set in the icon, because with no such directory set
 ; it tries to create new wallets without a path given in the probably non-writable program folder and will abort with an error
-Name: "{group}\Utilities\Textual (CLI) Wallet"; Filename: "{app}\monero-wallet-cli.exe"; WorkingDir: "{userdocs}\Monero\wallets"
+Name: "{group}\Utilities\Textual (CLI) Wallet"; Filename: "{app}\haven-wallet-cli.exe"; WorkingDir: "{userdocs}\Haven\wallets"
 
 ; Icons for troubleshooting problems / testing / debugging
 ; To show that they are in some way different (not for everyday use), make them visually different
-; from the others by text, and make them sort at the end by the help of "x" in front 
+; from the others by text, and make them sort at the end by the help of "x" in front
 Name: "{group}\Utilities\x (Check Blockchain Folder)"; Filename: "{win}\Explorer.exe"; Parameters: {code:BlockChainDir}
 Name: "{group}\Utilities\x (Check Daemon Log)"; Filename: "Notepad"; Parameters: {code:DaemonLog}
-Name: "{group}\Utilities\x (Check Default Wallet Folder)"; Filename: "{win}\Explorer.exe"; Parameters: "{userdocs}\Monero\wallets"
+Name: "{group}\Utilities\x (Check Default Wallet Folder)"; Filename: "{win}\Explorer.exe"; Parameters: "{userdocs}\Haven\wallets"
 Name: "{group}\Utilities\x (Check GUI Wallet Log)"; Filename: "Notepad"; Parameters: "{app}\haven-wallet-gui.log"
-Name: "{group}\Utilities\x (Try Daemon, Exit Confirm)"; Filename: "{app}\monero-daemon.bat"
+Name: "{group}\Utilities\x (Try Daemon, Exit Confirm)"; Filename: "{app}\haven-daemon.bat"
 Name: "{group}\Utilities\x (Try GUI Wallet Low Graphics Mode)"; Filename: "{app}\start-low-graphics-mode.bat"
-Name: "{group}\Utilities\x (Try Kill Daemon)"; Filename: "Taskkill.exe"; Parameters: "/IM monerod.exe /T /F"
+Name: "{group}\Utilities\x (Try Kill Daemon)"; Filename: "Taskkill.exe"; Parameters: "/IM havend.exe /T /F"
 
 ; Desktop icons, optional with the help of the "Task" section
 Name: "{userdesktop}\GUI Wallet"; Filename: "{app}\haven-wallet-gui.exe"; Tasks: desktopicon
@@ -379,7 +379,7 @@ Name: "{userdesktop}\GUI Wallet"; Filename: "{app}\haven-wallet-gui.exe"; Tasks:
 ; Store any special flags for the daemon in the registry location where the GUI wallet will take it from
 ; So if the wallet is used to start the daemon instead of the separate icon the wallet will pass the correct flags
 ; Side effect, mostly positive: The uninstaller will clean the registry
-Root: HKCU; Subkey: "Software\monero-project"; Flags: uninsdeletekeyifempty
-Root: HKCU; Subkey: "Software\monero-project\monero-core"; Flags: uninsdeletekey
-Root: HKCU; Subkey: "Software\monero-project\monero-core"; ValueType: string; ValueName: "daemonFlags"; ValueData: {code:DaemonFlags};
+Root: HKCU; Subkey: "Software\haven-project"; Flags: uninsdeletekeyifempty
+Root: HKCU; Subkey: "Software\haven-project\haven-core"; Flags: uninsdeletekey
+Root: HKCU; Subkey: "Software\haven-project\haven-core"; ValueType: string; ValueName: "daemonFlags"; ValueData: {code:DaemonFlags};
 

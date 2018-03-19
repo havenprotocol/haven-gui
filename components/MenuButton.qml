@@ -55,7 +55,7 @@ Rectangle {
         return offset
     }
 
-    color: checked ? "#FFFFFF" : "#0F242B"
+    color: checked ? "#FFFFFF" : "#0c091d"
     property bool present: !under || under.checked || checked || under.numSelectedChildren > 0
     height: present ? ((appWindow.height >= 800) ? 48 * scaleRatio  : 36 * scaleRatio ) : 0
 
@@ -97,7 +97,7 @@ Rectangle {
                 width: 10 * scaleRatio
                 height: width
                 radius: height / 2
-                color: "#0F242B"
+                color: "#0c091d"
                 visible: !button.checked && !buttonArea.containsMouse
             }
         }

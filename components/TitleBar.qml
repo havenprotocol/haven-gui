@@ -32,7 +32,7 @@ import QtQuick.Layouts 1.1
 
 Rectangle {
     id: titleBar
-    color: "#0F242B"
+    color: "#0c091d"
     property int mouseX: 0
     property bool containsMouse: false
     property alias basicButtonVisible: goToBasicVersionButton.visible
@@ -60,7 +60,7 @@ Rectangle {
         property bool checked: false
         anchors.top: parent.top
         anchors.left: parent.left
-        color:  "#0F242B"
+        color:  "#0c091d"
         height: 30 * scaleRatio
         width: height
         visible: isMobile
@@ -96,7 +96,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#6B0072" : "#0F242B"
+            color: containsMouse ? "#6B0072" : "#0c091d"
 
             Image {
                 anchors.centerIn: parent
@@ -117,7 +117,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#3665B3" : "#0F242B"
+            color: containsMouse ? "#3665B3" : "#0c091d"
 
             Image {
                 anchors.centerIn: parent
@@ -139,7 +139,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#142f38" : "#0F242B"
+            color: containsMouse ? "#142f38" : "#0c091d"
 
             Image {
                 anchors.centerIn: parent
@@ -163,7 +163,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#E04343" : "#0F242B"
+            color: containsMouse ? "#E04343" : "#0c091d"
 
             Image {
                 anchors.centerIn: parent

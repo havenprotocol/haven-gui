@@ -33,7 +33,7 @@ Rectangle {
     id: item
     property int fillLevel: 0
     visible: false
-    color: "#0F242B"
+    color: "#0c091d"
 
     function updateProgress(currentBlock,targetBlock, blocksToSync, statusTxt){
         if(targetBlock == 1) {

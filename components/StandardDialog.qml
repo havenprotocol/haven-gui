@@ -140,10 +140,10 @@ Rectangle {
 
             MoneroComponents.StandardButton {
                 id: cancelButton
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 text: qsTr("Cancel") + translationManager.emptyString
                 onClicked: {
                     root.close()
@@ -153,10 +153,10 @@ Rectangle {
 
             MoneroComponents.StandardButton {
                 id: okButton
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 text: qsTr("OK")
                 KeyNavigation.tab: cancelButton
                 onClicked: {

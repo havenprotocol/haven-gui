@@ -239,7 +239,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.top: (isMobile)? parent.top : column1.bottom
         anchors.topMargin: (isMobile)? 0 : 25
-        color: "#0F242B"
+        color: "#0c091d"
 
 
         Flickable {
@@ -281,7 +281,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: dashboardButton.checked || transferButton.checked ? "#0F242B" : "#142f38"
+                color: dashboardButton.checked || transferButton.checked ? "#0c091d" : "#142f38"
                 height: 1
             }
             */
@@ -428,7 +428,7 @@ Rectangle {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: 16
-                color: miningButton.checked || settingsButton.checked ? "#0F242B" : "#142f38"
+                color: miningButton.checked || settingsButton.checked ? "#0c091d" : "#142f38"
                 height: 1
             }
             // ------------- TxKey tab ---------------

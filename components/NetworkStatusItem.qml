@@ -63,7 +63,7 @@ Rectangle {
     }
 
 
-    color: "#0F242B"
+    color: "#0c091d"
     Row {
         height: 60 * scaleRatio
         Item {

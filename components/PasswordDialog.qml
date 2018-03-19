@@ -146,13 +146,13 @@ Item {
             id: buttons
             spacing: 60 * scaleRatio
             Layout.alignment: Qt.AlignHCenter
-            
+
             MoneroComponents.StandardButton {
                 id: cancelButton
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 text: qsTr("Cancel") + translationManager.emptyString
                 KeyNavigation.tab: passwordInput
                 onClicked: {
@@ -162,10 +162,10 @@ Item {
             }
             MoneroComponents.StandardButton {
                 id: okButton
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 text: qsTr("Continue")
                 KeyNavigation.tab: cancelButton
                 onClicked: {

@@ -162,10 +162,10 @@ Rectangle {
                       id: amountAllButton
                       width: 60 * scaleRatio
                       text: qsTr("All") + translationManager.emptyString
-                      shadowReleasedColor: "#0F242B"
+                      shadowReleasedColor: "#0c091d"
                       shadowPressedColor: "#B32D00"
                       releasedColor: "#142f38"
-                      pressedColor: "#0F242B"
+                      pressedColor: "#0c091d"
                       enabled : true
                       onClicked: amountLine.text = "(all)"
                   }
@@ -201,10 +201,10 @@ Rectangle {
               StandardDropdown {
                   Layout.fillWidth: true
                   id: priorityDropdown
-                  shadowReleasedColor: "#0F242B"
+                  shadowReleasedColor: "#0c091d"
                   shadowPressedColor: "#B32D00"
                   releasedColor: "#142f38"
-                  pressedColor: "#0F242B"
+                  pressedColor: "#0c091d"
               }
           }
           // Make sure dropdown is on top
@@ -233,10 +233,10 @@ Rectangle {
               StandardButton {
                   id: qrfinderButton
                   text: qsTr("QR Code") + translationManager.emptyString
-                  shadowReleasedColor: "#0F242B"
+                  shadowReleasedColor: "#0c091d"
                   shadowPressedColor: "#B32D00"
                   releasedColor: "#142f38"
-                  pressedColor: "#0F242B"
+                  pressedColor: "#0c091d"
                   visible : appWindow.qrScannerEnabled
                   enabled : visible
                   width: visible ? 60 * scaleRatio : 0
@@ -257,10 +257,10 @@ Rectangle {
                   id: resolveButton
                   width: 60 * scaleRatio
                   text: qsTr("Resolve") + translationManager.emptyString
-                  shadowReleasedColor: "#0F242B"
+                  shadowReleasedColor: "#0c091d"
                   shadowPressedColor: "#B32D00"
                   releasedColor: "#142f38"
-                  pressedColor: "#0F242B"
+                  pressedColor: "#0c091d"
                   enabled : isValidOpenAliasAddress(addressLine.text)
                   onClicked: {
                       var result = walletManager.resolveOpenAlias(addressLine.text)
@@ -324,10 +324,10 @@ Rectangle {
               Layout.bottomMargin: 17 * scaleRatio
               Layout.topMargin: 17 * scaleRatio
               text: qsTr("Send") + translationManager.emptyString
-              shadowReleasedColor: "#0F242B"
+              shadowReleasedColor: "#0c091d"
               shadowPressedColor: "#B32D00"
               releasedColor: "#142f38"
-              pressedColor: "#0F242B"
+              pressedColor: "#0c091d"
               enabled : !appWindow.viewOnly && pageRoot.checkInformation(amountLine.text, addressLine.text, paymentIdLine.text, appWindow.persistentSettings.testnet)
               onClicked: {
                   console.log("Transfer: paymentClicked")
@@ -452,10 +452,10 @@ Rectangle {
             StandardButton {
                 id: saveTxButton
                 text: qsTr("Create tx file") + translationManager.emptyString
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 visible: appWindow.viewOnly
                 enabled: pageRoot.checkInformation(amountLine.text, addressLine.text, paymentIdLine.text, appWindow.persistentSettings.testnet)
                 onClicked: {
@@ -474,10 +474,10 @@ Rectangle {
             StandardButton {
                 id: signTxButton
                 text: qsTr("Sign tx file") + translationManager.emptyString
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 visible: !appWindow.viewOnly
                 onClicked: {
                     console.log("Transfer: sign tx clicked")
@@ -488,10 +488,10 @@ Rectangle {
             StandardButton {
                 id: submitTxButton
                 text: qsTr("Submit tx file") + translationManager.emptyString
-                shadowReleasedColor: "#0F242B"
+                shadowReleasedColor: "#0c091d"
                 shadowPressedColor: "#B32D00"
                 releasedColor: "#142f38"
-                pressedColor: "#0F242B"
+                pressedColor: "#0c091d"
                 visible: appWindow.viewOnly
                 enabled: pageRoot.enabled
                 onClicked: {

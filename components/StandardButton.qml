@@ -33,8 +33,8 @@ Item {
     id: button
     height: 37 * scaleRatio
     property string shadowPressedColor: "#B32D00"
-    property string shadowReleasedColor: "#0F242B"
-    property string pressedColor: "#0F242B"
+    property string shadowReleasedColor: "#0c091d"
+    property string pressedColor: "#0c091d"
     property string releasedColor: "#142f38"
     property string icon: ""
     property string textColor: "#FFFFFF"

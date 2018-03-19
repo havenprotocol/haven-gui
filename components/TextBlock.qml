@@ -4,4 +4,8 @@ TextEdit {
     wrapMode: Text.Wrap
     readOnly: true
     selectByMouse: true
+    onFocusChanged: {
+      if(focus === false)
+        deselect()
+    }
 }

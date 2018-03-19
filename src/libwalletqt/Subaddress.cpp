@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015, The Monero Project
+// Copyright (c) 2018, The Monero Project
 //
 // All rights reserved.
 //
@@ -26,49 +26,59 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#include "Subaddress.h"
+#include <QDebug>
 
-import QtQuick 2.0
+Subaddress::Subaddress(Monero::Subaddress *subaddressImpl, QObject *parent)
+  : QObject(parent), m_subaddressImpl(subaddressImpl)
+{
+    qDebug(__FUNCTION__);
+    getAll();
+}
 
-Item {
-    property alias image : buttonImage
-    property alias imageSource : buttonImage.source
+QList<Monero::SubaddressRow*> Subaddress::getAll(bool update) const
+{
+    qDebug(__FUNCTION__);
 
-    signal clicked(var mouse)
+    emit refreshStarted();
 
+    if(update)
+        m_rows.clear();
 
-    id: button
-    width: parent.height
-    height: parent.height
-    anchors.right: parent.right
-    anchors.top: parent.top
-    anchors.bottom: parent.bottom
-
-    Image {
-        id: buttonImage
-        source: ""
-        x : (parent.width - width) / 2
-        y : (parent.height - height)  /2
-        z: 100
-    }
-
-    MouseArea {
-        id: buttonArea
-        anchors.fill: parent
-        hoverEnabled: true
-        cursorShape: Qt.PointingHandCursor
-
-        onPressed: {
-            buttonImage.x = buttonImage.x + 2
-            buttonImage.y = buttonImage.y + 2
-        }
-        onReleased: {
-            buttonImage.x = buttonImage.x - 2
-            buttonImage.y = buttonImage.y - 2
-        }
-
-        onClicked: {
-            parent.clicked(mouse)
+    if (m_rows.empty()){
+        for (auto &row: m_subaddressImpl->getAll()) {
+            m_rows.append(row);
         }
     }
 
+    emit refreshFinished();
+    return m_rows;
+}
+
+Monero::SubaddressRow * Subaddress::getRow(int index) const
+{
+    return m_rows.at(index);
+}
+
+void Subaddress::addRow(quint32 accountIndex, const QString &label) const
+{
+    m_subaddressImpl->addRow(accountIndex, label.toStdString());
+    getAll(true);
+}
+
+void Subaddress::setLabel(quint32 accountIndex, quint32 addressIndex, const QString &label) const
+{
+    m_subaddressImpl->setLabel(accountIndex, addressIndex, label.toStdString());
+    getAll(true);
+}
+
+void Subaddress::refresh(quint32 accountIndex) const
+{
+    m_subaddressImpl->refresh(accountIndex);
+    getAll(true);
+}
+
+quint64 Subaddress::count() const
+{
+    return m_rows.size();
 }

@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015, The Monero Project
+// Copyright (c) 2018, The Monero Project
 //
 // All rights reserved.
 //
@@ -26,49 +26,36 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#ifndef SUBADDRESS_H
+#define SUBADDRESS_H
 
-import QtQuick 2.0
+#include <wallet/api/wallet2_api.h>
+#include <QObject>
+#include <QList>
+#include <QDateTime>
 
-Item {
-    property alias image : buttonImage
-    property alias imageSource : buttonImage.source
+class Subaddress : public QObject
+{
+    Q_OBJECT
+public:
+    Q_INVOKABLE QList<Monero::SubaddressRow*> getAll(bool update = false) const;
+    Q_INVOKABLE Monero::SubaddressRow * getRow(int index) const;
+    Q_INVOKABLE void addRow(quint32 accountIndex, const QString &label) const;
+    Q_INVOKABLE void setLabel(quint32 accountIndex, quint32 addressIndex, const QString &label) const;
+    Q_INVOKABLE void refresh(quint32 accountIndex) const;
+    quint64 count() const;
 
-    signal clicked(var mouse)
+signals:
+    void refreshStarted() const;
+    void refreshFinished() const;
 
+public slots:
 
-    id: button
-    width: parent.height
-    height: parent.height
-    anchors.right: parent.right
-    anchors.top: parent.top
-    anchors.bottom: parent.bottom
+private:
+    explicit Subaddress(Monero::Subaddress * subaddressImpl, QObject *parent);
+    friend class Wallet;
+    Monero::Subaddress * m_subaddressImpl;
+    mutable QList<Monero::SubaddressRow*> m_rows;
+};
 
-    Image {
-        id: buttonImage
-        source: ""
-        x : (parent.width - width) / 2
-        y : (parent.height - height)  /2
-        z: 100
-    }
-
-    MouseArea {
-        id: buttonArea
-        anchors.fill: parent
-        hoverEnabled: true
-        cursorShape: Qt.PointingHandCursor
-
-        onPressed: {
-            buttonImage.x = buttonImage.x + 2
-            buttonImage.y = buttonImage.y + 2
-        }
-        onReleased: {
-            buttonImage.x = buttonImage.x - 2
-            buttonImage.y = buttonImage.y - 2
-        }
-
-        onClicked: {
-            parent.clicked(mouse)
-        }
-    }
-
-}
+#endif // SUBADDRESS_H

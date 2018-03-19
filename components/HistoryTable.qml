@@ -1,21 +1,21 @@
 // Copyright (c) 2014-2015, The Monero Project
-// 
+//
 // All rights reserved.
-// 
+//
 // Redistribution and use in source and binary forms, with or without modification, are
 // permitted provided that the following conditions are met:
-// 
+//
 // 1. Redistributions of source code must retain the above copyright notice, this list of
 //    conditions and the following disclaimer.
-// 
+//
 // 2. Redistributions in binary form must reproduce the above copyright notice, this list
 //    of conditions and the following disclaimer in the documentation and/or other
 //    materials provided with the distribution.
-// 
+//
 // 3. Neither the name of the copyright holder nor the names of its contributors may be
 //    used to endorse or promote products derived from this software without specific
 //    prior written permission.
-// 
+//
 // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
 // EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
 // MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL
@@ -266,6 +266,46 @@ ListView {
 
                 }
             }
+
+            Item { //separator
+               width: 100
+               height: 14
+           }
+           // -- "Received by" title
+           Text {
+               anchors.bottom: parent.bottom
+               font.family: "Arial"
+               font.pixelSize: 12
+               color: "#535353"
+               text: (isOut ? qsTr("Spent from:") : qsTr("Received by:")) + translationManager.emptyString
+           }
+           Item { //separator
+               width: 5
+               height: 14
+           }
+           // -- "Index" value
+           Text {
+               anchors.bottom: parent.bottom
+               font.family: "Arial"
+               font.pixelSize: 13
+               font.bold: true
+               color: "#545454"
+               text: "#" + subaddrIndex
+           }
+           Item { //separator
+               width: 5
+               height: 14
+           }
+           // -- "Label" value
+           Text {
+               anchors.bottom: parent.bottom
+               font.family: "Arial"
+               font.pixelSize: 13
+               color: "#545454"
+               text: label
+               elide: Text.ElideRight
+               width: detailsButton.x - x - 30
+           }
         }
 
         // -- "Date", "Balance" and "Amound" section

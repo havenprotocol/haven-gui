@@ -1,4 +1,4 @@
-// Copyright (c) 2014-2015, The Monero Project
+// Copyright (c) 2018, The Monero Project
 //
 // All rights reserved.
 //
@@ -26,49 +26,37 @@
 // STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
+#ifndef SUBADDRESSMODEL_H
+#define SUBADDRESSMODEL_H
 
-import QtQuick 2.0
+#include <QAbstractListModel>
 
-Item {
-    property alias image : buttonImage
-    property alias imageSource : buttonImage.source
+class Subaddress;
 
-    signal clicked(var mouse)
+class SubaddressModel : public QAbstractListModel
+{
+    Q_OBJECT
 
+public:
+    enum SubaddressRowRole {
+        SubaddressRole = Qt::UserRole + 1, // for the SubaddressRow object;
+        SubaddressAddressRole,
+        SubaddressLabelRole,
+    };
+    Q_ENUM(SubaddressRowRole)
 
-    id: button
-    width: parent.height
-    height: parent.height
-    anchors.right: parent.right
-    anchors.top: parent.top
-    anchors.bottom: parent.bottom
+    SubaddressModel(QObject *parent, Subaddress *subaddress);
 
-    Image {
-        id: buttonImage
-        source: ""
-        x : (parent.width - width) / 2
-        y : (parent.height - height)  /2
-        z: 100
-    }
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    QHash<int, QByteArray> roleNames() const  override;
 
-    MouseArea {
-        id: buttonArea
-        anchors.fill: parent
-        hoverEnabled: true
-        cursorShape: Qt.PointingHandCursor
+public slots:
+    void startReset();
+    void endReset();
 
-        onPressed: {
-            buttonImage.x = buttonImage.x + 2
-            buttonImage.y = buttonImage.y + 2
-        }
-        onReleased: {
-            buttonImage.x = buttonImage.x - 2
-            buttonImage.y = buttonImage.y - 2
-        }
+private:
+    Subaddress *m_subaddress;
+};
 
-        onClicked: {
-            parent.clicked(mouse)
-        }
-    }
-
-}
+#endif // SUBADDRESSMODEL_H

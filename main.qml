@@ -1228,7 +1228,7 @@ ApplicationWindow {
 //                PropertyChanges { target: frameArea; blocked: true }
                 PropertyChanges { target: titleBar; visible: true }
 //                PropertyChanges { target: titleBar; y: 0 }
-                PropertyChanges { target: titleBar; title: qsTr("Haven") + translationManager.emptyString }
+                PropertyChanges { target: titleBar; title: qsTr("Haven Protocol") + translationManager.emptyString }
                 PropertyChanges { target: mobileHeader; visible: isMobile ? true : false }
             }
         ]

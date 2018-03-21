@@ -71,7 +71,7 @@ ApplicationWindow {
     property bool remoteNodeConnected: false
     property bool androidCloseTapped: false;
     // Default daemon addresses
-    readonly property string localDaemonAddress : !persistentSettings.testnet ? "localhost:17750" : "localhost:28081"
+    readonly property string localDaemonAddress : !persistentSettings.testnet ? "localhost:17750" : "localhost:27750"
     property string currentDaemonAddress;
     property bool startLocalNodeCancelled: false
 
@@ -953,7 +953,7 @@ ApplicationWindow {
         property bool   allow_background_mining : false
         property bool   miningIgnoreBattery : true
         property bool   testnet: false
-        property string daemon_address: testnet ? "localhost:28081" : "localhost:17750"
+        property string daemon_address: testnet ? "localhost:27750" : "localhost:17750"
         property string payment_id
         property int    restore_height : 0
         property bool   is_recovering : false

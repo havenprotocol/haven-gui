@@ -20,7 +20,7 @@ Rectangle {
         anchors.verticalCenterOffset: -5
         anchors.left: parent.left
         anchors.leftMargin: 50 * scaleRatio
-        source: "../images/moneroLogo2.png"
+        source: "../images/havenLogo.png"
     }
 
     Image {
@@ -28,8 +28,8 @@ Rectangle {
         visible: !logo.visible
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
-        anchors.leftMargin: 40 * scaleRatio 
-        source: "../images/moneroIcon.png"
+        anchors.leftMargin: 40 * scaleRatio
+        source: "../images/havenIcon.png"
     }
 
     Grid {

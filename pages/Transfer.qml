@@ -296,34 +296,47 @@ Rectangle {
               }
           }
 
-          Label {
-              id: paymentIdLabel
-              text: qsTr("Payment ID <font size='2'>( Optional )</font>") + translationManager.emptyString
-          }
-
-          // payment id input
-          LineEdit {
-              id: paymentIdLine
-              placeholderText: qsTr("16 or 64 hexadecimal characters") + translationManager.emptyString
+          RowLayout {
+              anchors.left: parent.left
+              anchors.right: parent.right
               Layout.fillWidth: true
+              Label {
+                  id: privacyLabel
+                  fontSize: 14
+                  text: ""
+              }
+
+              Label {
+                  id: costLabel
+                  fontSize: 14
+                  text: qsTr("Transaction cost") + translationManager.emptyString
+                  anchors.right: parent.right
+              }
           }
 
-          Label {
-              text: qsTr("Description <font size='2'>( Optional )</font>")
-                    + translationManager.emptyString
+          PrivacyLevel {
+              visible: !isMobile
+              id: privacyLevelItem
+              anchors.left: parent.left
+              anchors.right: parent.right
+              anchors.rightMargin: 17 * scaleRatio
+              onFillLevelChanged: updateMixin()
           }
 
-          LineEdit {
-              id: descriptionLine
-              placeholderText: qsTr("Saved to local wallet history") + translationManager.emptyString
-              Layout.fillWidth: true
+          PrivacyLevelSmall {
+              visible: isMobile
+              id: privacyLevelItemSmall
+              anchors.left: parent.left
+              anchors.right: parent.right
+              anchors.rightMargin: 17 * scaleRatio
+              onFillLevelChanged: updateMixin()
           }
 
           StandardButton {
               id: sendButton
               Layout.bottomMargin: 17 * scaleRatio
               Layout.topMargin: 17 * scaleRatio
-              text: qsTr("Send") + translationManager.emptyString
+              text: qsTr("Send Payment") + translationManager.emptyString
               shadowReleasedColor: "#0c091d"
               shadowPressedColor: "#B32D00"
               releasedColor: "#142f38"
@@ -376,6 +389,7 @@ Rectangle {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.leftMargin: 17 * scaleRatio
+        anchors.rightMargin: 17 * scaleRatio
         anchors.topMargin: 17 * scaleRatio
         anchors.bottomMargin: 17 * scaleRatio
         spacing: 10 * scaleRatio
@@ -402,45 +416,32 @@ Rectangle {
             Layout.bottomMargin: 30 * scaleRatio
         }
 
-        RowLayout {
+        Label {
             visible: persistentSettings.transferShowAdvanced
-            anchors.left: parent.left
-            anchors.right: parent.right
+            id: paymentIdLabel
+            text: qsTr("Payment ID <font size='2'>( Optional )</font>") + translationManager.emptyString
+        }
+
+        // payment id input
+        LineEdit {
+            visible: persistentSettings.transferShowAdvanced
+            id: paymentIdLine
+            placeholderText: qsTr("16 or 64 hexadecimal characters") + translationManager.emptyString
             Layout.fillWidth: true
-            Label {
-                id: privacyLabel
-                fontSize: 14
-                text: ""
-            }
-
-            Label {
-                id: costLabel
-                fontSize: 14
-                text: qsTr("Transaction cost") + translationManager.emptyString
-                anchors.right: parent.right
-            }
         }
 
-
-
-        PrivacyLevel {
-            visible: persistentSettings.transferShowAdvanced && !isMobile
-            id: privacyLevelItem
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.rightMargin: 17 * scaleRatio
-            onFillLevelChanged: updateMixin()
+        Label {
+            visible: persistentSettings.transferShowAdvanced
+            text: qsTr("Description <font size='2'>( Optional )</font>")
+                  + translationManager.emptyString
         }
 
-        PrivacyLevelSmall {
-            visible: persistentSettings.transferShowAdvanced && isMobile
-            id: privacyLevelItemSmall
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.rightMargin: 17 * scaleRatio
-            onFillLevelChanged: updateMixin()
+        LineEdit {
+            visible: persistentSettings.transferShowAdvanced
+            id: descriptionLine
+            placeholderText: qsTr("Saved to local wallet history") + translationManager.emptyString
+            Layout.fillWidth: true
         }
-
 
         GridLayout {
             visible: persistentSettings.transferShowAdvanced

@@ -297,9 +297,9 @@ Rectangle {
           }
 
           RowLayout {
+              Layout.fillWidth: true
               anchors.left: parent.left
               anchors.right: parent.right
-              Layout.fillWidth: true
               Label {
                   id: privacyLabel
                   fontSize: 14
@@ -314,22 +314,22 @@ Rectangle {
               }
           }
 
-          PrivacyLevel {
-              visible: !isMobile
-              id: privacyLevelItem
-              anchors.left: parent.left
-              anchors.right: parent.right
-              anchors.rightMargin: 17 * scaleRatio
-              onFillLevelChanged: updateMixin()
-          }
+          RowLayout {
+              Layout.fillWidth: true
 
-          PrivacyLevelSmall {
-              visible: isMobile
-              id: privacyLevelItemSmall
-              anchors.left: parent.left
-              anchors.right: parent.right
-              anchors.rightMargin: 17 * scaleRatio
-              onFillLevelChanged: updateMixin()
+              PrivacyLevel {
+                  visible: !isMobile
+                  id: privacyLevelItem
+                  Layout.fillWidth: true
+                  onFillLevelChanged: updateMixin()
+              }
+
+              PrivacyLevelSmall {
+                  visible: isMobile
+                  id: privacyLevelItemSmall
+                  Layout.fillWidth: true
+                  onFillLevelChanged: updateMixin()
+              }
           }
 
           StandardButton {

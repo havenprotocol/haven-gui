@@ -32,13 +32,13 @@ import QtQuick.Layouts 1.1
 
 Rectangle {
     id: titleBar
-    color: "#0c091d"
+    color: "#e7e5e7"
     property int mouseX: 0
     property bool containsMouse: false
     property alias basicButtonVisible: goToBasicVersionButton.visible
     property bool customDecorations: true
     signal goToBasicVersion(bool yes)
-    height: customDecorations && !isMobile ? 30 : 0
+    height: customDecorations && !isMobile ? 24 : 0
     y: -height
     property string title
     property alias maximizeButtonVisible: maximizeButton.visible
@@ -47,8 +47,8 @@ Rectangle {
     Text {
         anchors.centerIn: parent
         font.family: "Arial"
-        font.pixelSize: 15
-        color: "#FFFFFF"
+        font.pixelSize: 14
+        color: "#222222"
         text: titleBar.title
         visible: customDecorations
     }
@@ -60,8 +60,8 @@ Rectangle {
         property bool checked: false
         anchors.top: parent.top
         anchors.left: parent.left
-        color:  "#0c091d"
-        height: 30 * scaleRatio
+        color:  "#e7e5e7"
+        height: 24 * scaleRatio
         width: height
         visible: isMobile
 
@@ -96,7 +96,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#6B0072" : "#0c091d"
+            color: containsMouse ? "#6B0072" : "#e7e5e7"
 
             Image {
                 anchors.centerIn: parent
@@ -117,7 +117,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#3665B3" : "#0c091d"
+            color: containsMouse ? "#3665B3" : "#e7e5e7"
 
             Image {
                 anchors.centerIn: parent
@@ -139,7 +139,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#142f38" : "#0c091d"
+            color: containsMouse ? "#142f38" : "#e7e5e7"
 
             Image {
                 anchors.centerIn: parent
@@ -163,7 +163,7 @@ Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
-            color: containsMouse ? "#E04343" : "#0c091d"
+            color: containsMouse ? "#E04343" : "#e7e5e7"
 
             Image {
                 anchors.centerIn: parent

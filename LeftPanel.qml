@@ -69,9 +69,10 @@ Rectangle {
     }
 
     width: (isMobile)? appWindow.width : 260
-    color: "#FFFFFF"
+    color: "#0c091d"
     anchors.bottom: parent.bottom
     anchors.top: parent.top
+    clip: true
 
     // Item with monero logo
     Item {
@@ -167,7 +168,7 @@ Rectangle {
                 id: balanceText
                 anchors.verticalCenter: parent.verticalCenter
                 font.family: "Arial"
-                color: "#000000"
+                color: "#ffffff"
                 text: "N/A"
                 // dynamically adjust text size
                 font.pixelSize: {
@@ -199,7 +200,7 @@ Rectangle {
             anchors.left: parent.left
             anchors.leftMargin: 50
             font.family: "Arial"
-            color: "#000000"
+            color: "#ffffff"
             text: "N/A"
             // dynamically adjust text size
             font.pixelSize: {
@@ -219,7 +220,7 @@ Rectangle {
         anchors.left: parent.left
         anchors.bottom: menuRect.top
         width: 1
-        color: "#DBDBDB"
+        color: "#0c091d"
     }
 
     Rectangle {
@@ -227,7 +228,7 @@ Rectangle {
         anchors.right: parent.right
         anchors.top: parent.top
         height: 1
-        color: "#DBDBDB"
+        color: "#0c091d"
     }
 
 
@@ -288,6 +289,15 @@ Rectangle {
 
 
             // ------------- Transfer tab ---------------
+            Rectangle {
+                visible: receiveButton.present
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.leftMargin: 16
+                color: "#142f38"
+                height: 1
+            }
+
             MenuButton {
                 id: transferButton
                 anchors.left: parent.left

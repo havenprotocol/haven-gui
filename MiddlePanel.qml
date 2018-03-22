@@ -159,7 +159,7 @@ Rectangle {
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 2
-        anchors.topMargin: appWindow.persistentSettings.customDecorations ? 30 : 0
+        anchors.topMargin: appWindow.persistentSettings.customDecorations ? 24 : 0
         spacing: 0
 
         Flickable {

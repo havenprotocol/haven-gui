@@ -41,7 +41,7 @@ Rectangle {
     color: "#0c091d"
 
     border.width: 1
-    border.color: "#DBDBDB"
+    border.color: "#0c091d"
 
     property alias balanceText : balanceText.text;
     property alias unlockedBalanceText : availableBalanceText.text;
@@ -65,7 +65,7 @@ Rectangle {
         anchors.top: parent.top
         anchors.leftMargin: 1
         anchors.rightMargin: 1
-        anchors.topMargin: 30
+        anchors.topMargin: 26
         height: 64
         color: "#FFFFFF"
 
@@ -152,7 +152,7 @@ Rectangle {
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             height: 1
-            color: "#DBDBDB"
+            color: "#0c091d"
         }
     }
     Item {

@@ -326,7 +326,7 @@ ApplicationWindow {
 
         // If wallet isnt connected and no daemon is running - Ask
         if(!isMobile && isDaemonLocal() && !walletInitialized && status === Wallet.ConnectionStatus_Disconnected && !daemonManager.running(persistentSettings.testnet)){
-            daemonManagerDialog.open();
+            // daemonManagerDialog.open();
         }
         // initialize transaction history once wallet is initialized first time;
         if (!walletInitialized) {

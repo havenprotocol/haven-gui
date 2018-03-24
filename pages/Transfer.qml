@@ -213,6 +213,8 @@ Rectangle {
 
       ColumnLayout {
           Layout.fillWidth: true
+          Layout.topMargin: 17 * scaleRatio
+
           Label {
               id: addressLabel
               textFormat: Text.RichText
@@ -298,6 +300,7 @@ Rectangle {
 
           RowLayout {
               Layout.fillWidth: true
+              Layout.topMargin: 17 * scaleRatio
               anchors.left: parent.left
               anchors.right: parent.right
               Label {

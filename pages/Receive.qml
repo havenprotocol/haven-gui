@@ -47,7 +47,6 @@ Rectangle {
     property var model
     property var current_address
     property alias addressText : pageReceive.current_address
-    property string trackingLineText: ""
 
     function makeQRCodeString() {
         var s = "monero:"
@@ -59,85 +58,6 @@ Rectangle {
           s += "tx_amount=" + amount
         }
         return s
-    }
-
-    function setTrackingLineText(text) {
-        // don't replace with same text, it wrecks selection while the user is selecting
-        // also keep track of text, because when we read back the text from the widget,
-        // we do not get what we put it, but some extra HTML stuff on top
-        if (text != trackingLineText) {
-            trackingLine.text = text
-            trackingLineText = text
-        }
-    }
-
-    function update() {
-        if (!appWindow.currentWallet) {
-            setTrackingLineText("-")
-            return
-        }
-        if (appWindow.currentWallet.connected() == Wallet.ConnectionStatus_Disconnected) {
-            setTrackingLineText(qsTr("WARNING: no connection to daemon"))
-            return
-        }
-
-        var model = appWindow.currentWallet.historyModel
-        var count = model.rowCount()
-        var totalAmount = 0
-        var nTransactions = 0
-        var list = []
-        var blockchainHeight = 0
-        for (var i = 0; i < count; ++i) {
-            var idx = model.index(i, 0)
-            var isout = model.data(idx, TransactionHistoryModel.TransactionIsOutRole);
-            var subaddrAccount = model.data(idx, TransactionHistoryModel.TransactionSubaddrAccountRole);
-            var subaddrIndex = model.data(idx, TransactionHistoryModel.TransactionSubaddrIndexRole);
-            if (!isout && subaddrAccount == appWindow.currentWallet.currentSubaddressAccount && subaddrIndex == table.currentIndex) {
-                var amount = model.data(idx, TransactionHistoryModel.TransactionAtomicAmountRole);
-                totalAmount = walletManager.addi(totalAmount, amount)
-                nTransactions += 1
-
-                var txid = model.data(idx, TransactionHistoryModel.TransactionHashRole);
-                var blockHeight = model.data(idx, TransactionHistoryModel.TransactionBlockHeightRole);
-                if (blockHeight == 0) {
-                    list.push(qsTr("in the txpool: %1").arg(txid) + translationManager.emptyString)
-                } else {
-                    if (blockchainHeight == 0)
-                        blockchainHeight = walletManager.blockchainHeight()
-                    var confirmations = blockchainHeight - blockHeight - 1
-                    var displayAmount = model.data(idx, TransactionHistoryModel.TransactionDisplayAmountRole);
-                    if (confirmations > 1) {
-                        list.push(qsTr("%2 confirmations: %3 (%1)").arg(txid).arg(confirmations).arg(displayAmount) + translationManager.emptyString)
-                    } else {
-                        list.push(qsTr("1 confirmation: %2 (%1)").arg(txid).arg(displayAmount) + translationManager.emptyString)
-                    }
-                }
-            }
-        }
-        // if there are too many txes, only show the first 3
-        if (list.length > 3) {
-            list.length = 3;
-            list.push("...");
-        }
-
-        if (nTransactions == 0) {
-            setTrackingLineText(qsTr("No transaction found yet...") + translationManager.emptyString)
-            return
-        }
-
-        var text = ((nTransactions == 1) ? qsTr("Transaction found") : qsTr("%1 transactions found").arg(nTransactions)) + translationManager.emptyString
-
-        var expectedAmount = walletManager.amountFromString(amountLine.text)
-        if (expectedAmount && expectedAmount != amount) {
-            var displayTotalAmount = walletManager.displayAmount(totalAmount)
-            if (amount > expectedAmount) {
-                text += qsTr(" with more money (%1)").arg(displayTotalAmount) + translationManager.emptyString
-            } else if (amount < expectedAmount) {
-                text += qsTr(" with not enough money (%1)").arg(displayTotalAmount) + translationManager.emptyString
-            }
-        }
-
-        setTrackingLineText(text + "<br>" + list.join("<br>"))
     }
 
     Clipboard { id: clipboard }
@@ -255,55 +175,6 @@ Rectangle {
             }
         }
 
-        RowLayout {
-            id: trackingRow
-            visible: !isAndroid && !isIOS
-            Label {
-                id: trackingLabel
-                textFormat: Text.RichText
-                text: "<style type='text/css'>a {text-decoration: none; color: #142f38; font-size: 14px;}</style>" +
-                      qsTr("Tracking") +
-                      "<font size='2'> (</font><a href='#'>" +
-                      qsTr("help") +
-                      "</a><font size='2'>)</font>" +
-                      translationManager.emptyString
-                width: mainLayout.labelWidth
-                onLinkActivated: {
-                    trackingHowToUseDialog.title  = qsTr("Tracking payments") + translationManager.emptyString;
-                    trackingHowToUseDialog.text = qsTr(
-                        "<p><font size='+2'>This is a simple sales tracker:</font></p>" +
-                        "<p>Let your customer scan that QR code to make a payment (if that customer has software which " +
-                        "supports QR code scanning).</p>" +
-                        "<p>This page will automatically scan the blockchain and the tx pool " +
-                        "for incoming transactions using this QR code. If you input an amount, it will also check " +
-                        "that incoming transactions total up to that amount.</p>" +
-                        "It's up to you whether to accept unconfirmed transactions or not. It is likely they'll be " +
-                        "confirmed in short order, but there is still a possibility they might not, so for larger " +
-                        "values you may want to wait for one or more confirmation(s).</p>"
-                    )
-                    trackingHowToUseDialog.icon = StandardIcon.Information
-                    trackingHowToUseDialog.open()
-                }
-            }
-
-            TextEdit {
-                id: trackingLine
-                anchors.top: trackingRow.top
-                textFormat: Text.RichText
-                text: ""
-                readOnly: true
-                width: mainLayout.editWidth
-                Layout.fillWidth: true
-                selectByMouse: true
-            }
-
-        }
-
-        MessageDialog {
-            id: trackingHowToUseDialog
-            standardButtons: StandardButton.Ok
-        }
-
         FileDialog {
             id: qrFileDialog
             title: "Please choose a name"
@@ -351,12 +222,6 @@ Rectangle {
         }
     }
 
-    Timer {
-        id: timer
-        interval: 2000; running: false; repeat: true
-        onTriggered: update()
-    }
-
     function onPageCompleted() {
         console.log("Receive page loaded");
         table.model = currentWallet.subaddressModel;
@@ -367,11 +232,5 @@ Rectangle {
               table.currentIndex = 0
         }
 
-        update()
-        timer.running = true
-    }
-
-    function onPageClosed() {
-        timer.running = false
     }
 }

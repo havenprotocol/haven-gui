@@ -69,7 +69,7 @@ See [LICENSE](LICENSE).
 
   - For Linux Mint 18 "Sarah" - Cinnamon x64
 
-    `sudo apt install qml-module-qt-labs-settings qml-module-qtgraphicaleffects`
+    `sudo apt install qml-module-qt-labs-settings qml-module-qtgraphicaleffects qml-module-qt-labs-folderlistmodel`
 
   - For Gentoo
 

@@ -87,9 +87,9 @@ int main(int argc, char *argv[])
 
     qDebug() << "app startd";
 
-    app.setApplicationName("monero-core");
-    app.setOrganizationDomain("getmonero.org");
-    app.setOrganizationName("monero-project");
+    app.setApplicationName("haven");
+    app.setOrganizationDomain("havenprotocol.com");
+    app.setOrganizationName("haven-protocol");
 
     filter *eventFilter = new filter;
     app.installEventFilter(eventFilter);
@@ -240,7 +240,7 @@ int main(int argc, char *argv[])
         accountName = qgetenv("USERNAME"); // Windows
     }
     if (accountName.isEmpty()) {
-        accountName = "My monero Account";
+        accountName = "My Haven Account";
     }
 
     engine.rootContext()->setContextProperty("defaultAccountName", accountName);
